@@ -6,16 +6,16 @@ disqus_shortname:
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         bio-photo.jpg
-  bio:            "Describe your self."
-  email:          your@email.com
+  name:           Neil Camara
+  avatar:         neilmarch2014.jpg
+  bio:            "I'm a farmer"
+  email:          rcamara@rocketmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        
+  twitter: http://www.twitter.com/v1rtu0s1ty
   facebook:       
-  github:         
-  stackoverflow: 
-  linkedin:       
+  github: http://github.com/c0debreaker 
+  stackoverflow:
+    linkedin: http://www.linkedin.com/ronneilcamara
   instagram:      
   lastfm:         
   tumblr: 
