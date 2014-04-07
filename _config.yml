@@ -11,11 +11,11 @@ owner:
   bio:            "I'm a farmer"
   email:          rcamara@rocketmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: http://www.twitter.com/v1rtu0s1ty
+  twitter: v1rtu0s1ty
   facebook:       
-  github: http://github.com/c0debreaker 
+  github: c0debreaker 
   stackoverflow:
-  linkedin: https://www.linkedin.com/in/ronneilcamara
+  linkedin: ronneilcamara
   instagram:      
   lastfm:         
   tumblr: 
@@ -24,7 +24,7 @@ owner:
   steam: 
   dribbble: 
   # For Google Authorship https://plus.google.com/authorship
-  google_plus: https://plus.google.com/103341235804505564047
+  google_plus: 103341235804505564047
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
