@@ -24,7 +24,7 @@ owner:
   steam: 
   dribbble: 
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:103341235804505564047
+  google_plus:'103341235804505564047'
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
