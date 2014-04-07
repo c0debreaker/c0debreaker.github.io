@@ -15,7 +15,7 @@ owner:
   facebook:       
   github: http://github.com/c0debreaker 
   stackoverflow:
-    linkedin: http://www.linkedin.com/ronneilcamara
+  linkedin: https://www.linkedin.com/in/ronneilcamara
   instagram:      
   lastfm:         
   tumblr: 
@@ -24,7 +24,7 @@ owner:
   steam: 
   dribbble: 
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+  google_plus: https://plus.google.com/103341235804505564047
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
@@ -41,9 +41,9 @@ links:
     url: /posts/
   - title: Theme Setup
     url: /theme-setup/
-  - title: Made Mistakes
-    url: http://mademistakes.com
-    external: true
+#  - title: Made Mistakes
+#    url: http://mademistakes.com
+#    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
