@@ -40,7 +40,7 @@ This is how it looks in Chrome Developer Tools
 
 Below is an output using a different tool
 
-> It was able to capture most of the cookie variables.
+> It was able to capture most of the cookie variables. A different browser was used this time.
 
 <figure>
     <a href="/images/heartbleed-captures.png"><img src="/images/heartbleed-captures.png"></a>
