@@ -38,6 +38,10 @@ This is how it looks in Chrome Developer Tools
     <a href="/images/cookie-on-chrome-dev-tools.png"><img src="/images/cookie-on-chrome-dev-tools.png"></a>
 </figure>
 
+Below is an output using a different tool
+<figure>
+    <a href="/images/heartbleed-captures.png"><img src="/images/heartbleed-captures.png"></a>
+</figure>
 
 [Full-source code can be downloaded here](https://gist.github.com/c0debreaker/10225656)
 
