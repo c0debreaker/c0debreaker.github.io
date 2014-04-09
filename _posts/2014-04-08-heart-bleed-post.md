@@ -20,7 +20,7 @@ securepassword=iamencrypted
 
 The command above will try to capture section of a memory on the server running a vulnerable OpenSSL version. This is not even a mitm attack. This tool is directly connected to the Apache server via SSL(https). I noticed though sometimes, it doesn't capture anything. I'm pretty sure that the full working code is not being shared which I think is appropriate. The output shows it was able to capture the securepassword cookie. I would like to emphasize that this is totally different from sniffing.
 
-On my browser, I visited http://192.168.199.135/index.php
+On my browser, I visited https://192.168.199.135/index.php
 {% highlight c %}
 <?php
     session_start();
