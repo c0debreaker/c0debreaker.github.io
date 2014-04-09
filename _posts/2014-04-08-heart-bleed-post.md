@@ -30,9 +30,9 @@ On my browser, I visited http://192.168.199.135/index.php
 {% endhighlight %}
 
 This is how it looks in Chrome Developer Tools
-{% highlight html %}
-<img src="/images/cookie-on-chrome-dev-tools.png">
-{% endhighlight %}
+<figure>
+    <img src="/images/cookie-on-chrome-dev-tools.png">
+</figure>
 
 
 [Can be downloaded here](https://gist.github.com/c0debreaker/10225656)
