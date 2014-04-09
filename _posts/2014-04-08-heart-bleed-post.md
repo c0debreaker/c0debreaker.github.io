@@ -8,7 +8,7 @@ comments: true
 
 This code is not mine nor I claim credits for it. You should use it only on your servers. It is very much against the law if your run it on servers that you do not own. This code is for educational purposes only. I take no responsibility for you doing something stupid with it. Use it to check if your servers are vulnerable.
 
-This is in regards to the bug that was found in OpenSSL versions 1.0.1 to 1.0.1f. These versions do not properly handle hearbeat extension. More info can be read [here](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160).
+This is in regards to the bug that was found in OpenSSL versions 1.0.1 to 1.0.1f. These versions do not properly handle hearbeat extension. More info can be read here, [CVE-2014-0160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160).
 
 ### Testing Ubuntu 12.04.3 LTS running OpenSSL 1.0.1
 
