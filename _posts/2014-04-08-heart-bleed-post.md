@@ -35,7 +35,7 @@ This is how it looks in Chrome Developer Tools
 </figure>
 
 
-[Can be downloaded here](https://gist.github.com/c0debreaker/10225656)
+[Full-source code can be downloaded here](https://gist.github.com/c0debreaker/10225656)
 
 {% highlight c %}
 #!/usr/bin/python
