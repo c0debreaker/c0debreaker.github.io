@@ -39,6 +39,9 @@ This is how it looks in Chrome Developer Tools
 </figure>
 
 Below is an output using a different tool
+
+> It was able to capture most of the cookie variables.
+
 <figure>
     <a href="/images/heartbleed-captures.png"><img src="/images/heartbleed-captures.png"></a>
 </figure>
