@@ -21,7 +21,7 @@ securepassword=iamencrypted
 The command above will try to capture section of a memory on the OpenSSL server. This is not even a mitm attack. This tool is directly connected to the Apache server via ssl(https). I noticed though sometimes, it doesn't capture anything. I'm pretty sure that the full working code is not being shared which I think is appropriate.
 
 On my browser, I visited http://192.168.199.135/index.php
-{% highlight c %}
+{% highlight php %}
 <?php
     session_start();
     setcookie("securepassword", "iamencrypted");
@@ -30,7 +30,7 @@ On my browser, I visited http://192.168.199.135/index.php
 {% endhighlight %}
 
 This is how it looks in Chrome Developer Tools
-{% hightlight html %}
+{% highlight html %}
 <img src="/images/cookie-on-chrome-dev-tools.png">
 {% endhighlight %}
 
