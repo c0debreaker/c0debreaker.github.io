@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Fun with obscure Javascript coding
-description: ""
+description: "Do you still remember Unicodes? I still do!!!"
 tags: [javascript, obscured code, unicodes]
 comments: true
 ---
 
-As usual, I'm here again inside the train and heading to work. Rather than just staring outside and looking at the blurred external surroundings(LOL), I decided to play with some javascript codes playing in my head. Copy+paste the code below into your browser's console.
+As usual, I'm here again inside the train and heading to work. Rather than just staring outside and looking at the blurred external surroundings(LOL), I decided to play with some javascript codes playing in my head. Copy+paste the code below into your browser's console. The code is very basic. If you understand loops and arrays, you should be able to understand the code.
 
 ### The Beauty of Code Obscurity
 
