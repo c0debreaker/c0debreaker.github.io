@@ -8,7 +8,7 @@ comments: true
 
 As usual, I'm here again inside the train and heading to work. Rather than just staring outside and looking at the blurred external surroundings(LOL), I decided to play with some javascript codes playing in my head. Copy+paste the code below into your browser's console.
 
-###
+### The Beauty of Code Obscurity
 
 {% highlight c %}
 
