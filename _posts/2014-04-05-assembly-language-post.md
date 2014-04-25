@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Journey into Exploitation Part I
+title: My Journey into Exploitation Part I, Apr5
 description: "My Journey into Exploitation"
 tags: [assembly, hacking, exploitation, reverse engineering]
 comments: true

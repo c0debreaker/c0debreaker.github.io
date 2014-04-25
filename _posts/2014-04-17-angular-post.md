@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AngularJS is crazy!!!
+title: AngularJS is crazy!!! Apr17
 description: "My feedback about AngularJS"
 tags: [hacking, frontend development, angularjs]
 comments: true

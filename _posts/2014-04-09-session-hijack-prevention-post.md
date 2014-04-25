@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PoC to capture data via the Heartbleed Bug, Apr8
+title: Session Hijacking, Apr9
 description: "A simple proof of concept on how to capture data on server running OpenSSL"
 tags: [heartbeat bug, hacking, exploitation]
 comments: true
