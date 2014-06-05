@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BAAM JSON to CSV Exporter</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js"></script> 
+    <script type="text/javascript" src="http://asafdav.github.io/ng-csv/javascripts/ng-csv.js"></script>
+    <script>
+    var csv = angular.module('csv', ['ngCsv'])
+      .controller('JSONToCSVController', function($scope) {
+          $scope.getArray = [
+            {
+                "user": "Walmart Inc.",
+                "reportDate": "May-2014",
+                "totalBytes": 400,
+                "bytesIn": 200,
+                "bytesOut": 200,
+                "udi": "ABC12345",
+                "href": "http://localhost:8080/baam-api/reports/monthly/devices/ABC12345"
+            },
+            {
+                "user": "Walmart Inc.",
+                "reportDate": "May-2014",
+                "totalBytes": 400,
+                "bytesIn": 200,
+                "bytesOut": 200,
+                "udi": "ABC1111",
+                "href": "http://localhost:8080/baam-api/reports/monthly/devices/ABC11111"
+            }
+        ];                            
+      });
+
+    </script>
+  </head>
+
+  <body ng-app="csv">
+    BAAM JSON to CSV Exporter<br/><br/>
+      [<br/>
+            {<br/>
+                "user": "Walmart Inc.",<br/>
+                "reportDate": "May-2014",<br/>
+                "totalBytes": 400,<br/>
+                "bytesIn": 200,<br/>
+                "bytesOut": 200,<br/>
+                "udi": "ABC12345",<br/>
+                "href": "http://localhost:8080/baam-api/reports/monthly/devices/ABC12345"<br/>
+            },<br/>
+            {<br/>
+                "user": "Walmart Inc.",<br/>
+                "reportDate": "May-2014",<br/>
+                "totalBytes": 400,<br/>
+                "bytesIn": 200,<br/>
+                "bytesOut": 200,<br/>
+                "udi": "ABC1111",<br/>
+                "href": "http://localhost:8080/baam-api/reports/monthly/devices/ABC11111"<br/>
+            }<br/>
+        ];<br/><br/>                   
+      <div ng-controller="JSONToCSVController">
+        <h2>Click the button below to export JSON to CSV format</h2>
+        <a href="#" ng-csv="getArray" filename="test.csv"><img src="csv.png" width="50px"></a>
+        <!-- button type="button" ng-csv="getArray" filename="test.csv">Click me to export JSON above</button -->
+      </div>
+  </body>
+</html>
