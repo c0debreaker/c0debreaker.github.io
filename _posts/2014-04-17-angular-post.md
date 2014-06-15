@@ -46,7 +46,6 @@ cockpitApp.controller('DailyCassandraController', ['$scope', 'ngTableParams', 'D
 
     $scope.dataLoader = DailyCassandraFactory.getJsonData();
     $scope.dataLoader.then(function(data) {
-        // $scope.monthlyCassandraData = data;
         $scope.tableParams = new ngTableParams({
             page: 1,
             count: 10,
