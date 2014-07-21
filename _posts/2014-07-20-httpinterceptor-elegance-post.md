@@ -20,7 +20,7 @@ Well, I honestly like the reasons why they built it that way. The first REST cal
 receive the file. This is what I'm actually doing but not via a for or while-loop. I'm exploting the power of Angulars' $httpProvider.interceptors. The other way cooler approach would be to put the resourceId in collection and have a small window somewhere in your app which will display clickable resourceIds :)
 
 
-### POST and multiple GET requests
+### Captured POST and multiple GET requests
 <figure>
     <a href="/images/restrequest.png"><img src="/images/restrequest.png"></a>
 </figure>
