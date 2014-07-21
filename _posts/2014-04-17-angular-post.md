@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AngularJS is awesome!!! Apr17
-description: "My feedback about AngularJS"
+title: AngularJS is awesome!!!
+description: "My feedback about AngularJS, April 17"
 tags: [hacking, frontend development, angularjs]
 comments: true
 ---
