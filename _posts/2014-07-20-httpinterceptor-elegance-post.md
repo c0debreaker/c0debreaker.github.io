@@ -116,4 +116,6 @@ $httpProvider.interceptors.push('HttpInterceptor');
 }]);
 {% endhighlight %}
 
+As a bonus, I've also included the code that captures 401 HTTP error code. So if I access an REST endpoint from any part of the application and I get a 401 HTTP error code, this will redirect me to the login screen. I don't have to write it multiple times! Isn't it lovely?! :)
+
 Have a great day everyone! Peace!
