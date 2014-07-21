@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PoC to capture data via the Heartbleed Bug, Apr8
-description: "A simple proof of concept on how to capture data on server running OpenSSL"
+title: PoC to capture data via the Heartbleed Bug
+description: "A simple proof of concept on how to capture data on server running OpenSSL! April 8"
 tags: [heartbeat bug, hacking, exploitation]
 comments: true
 ---

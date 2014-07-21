@@ -1,7 +1,7 @@
 ---
 layout: post
-title: The Elegance of AngularJS $httpProvider Interceptor, Jul21
-description: "Capturing headers and exploiting the power of intercepting http's request and response!!!"
+title: The Elegance of AngularJS $httpProvider Interceptor
+description: "Capturing headers and exploiting the power of intercepting http's request and response!!! July 21"
 tags: [javascript, angularjs, $httpProvider, interceptor, factories, restangular]
 comments: true
 ---

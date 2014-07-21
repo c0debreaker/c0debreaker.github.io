@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fun with obscure Javascript coding, Apr25
-description: "Do you still remember Unicodes? I still do!!!"
+title: Fun with obscure Javascript coding
+description: "Do you still remember Unicodes? I still do!!! April 25"
 tags: [javascript, obscured code, unicodes]
 comments: true
 ---

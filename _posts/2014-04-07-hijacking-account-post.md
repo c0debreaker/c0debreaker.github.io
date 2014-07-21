@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hijacking account via XSS, Apr7
-description: "A simple proof of concept on how to steal account via XSS vulnerability"
+title: Hijacking account via XSS
+description: "A simple proof of concept on how to steal account via XSS vulnerability! April 7"
 tags: [xss, hacking, exploitation]
 comments: true
 ---
