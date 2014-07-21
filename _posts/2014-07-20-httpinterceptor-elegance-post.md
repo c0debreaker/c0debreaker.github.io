@@ -42,11 +42,11 @@ OdometerRestFactory.one('csvexport').customPOST({}, path, { startdate : startHou
 ### $httpProvider Interceptor
 
 {% highlight c %}
-cockpitApp.config(['$provide', '$httpProvider', function ($provide, $httpProvider) {
+cbApp.config(['$provide', '$httpProvider', function ($provide, $httpProvider) {
 
 // Intercept http calls.
 
-$provide.factory('BaamHttpInterceptor', ['$q', '$injector', '$rootScope', function($q, $injector, $rootScope) {
+$provide.factory('HttpInterceptor', ['$q', '$injector', '$rootScope', function($q, $injector, $rootScope) {
     return {
         // On request success
         request: function (config) {
@@ -100,7 +100,7 @@ $provide.factory('BaamHttpInterceptor', ['$q', '$injector', '$rootScope', functi
 }]);
 
 // Add the interceptor to the $httpProvider.
-$httpProvider.interceptors.push('BaamHttpInterceptor');
+$httpProvider.interceptors.push('HttpInterceptor');
 
 }]);
 {% endhighlight %}
