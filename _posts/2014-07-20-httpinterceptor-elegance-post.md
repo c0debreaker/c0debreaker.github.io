@@ -19,7 +19,8 @@ Well, I honestly like the reasons why they built it that way. The first REST cal
 "Your report with resourceId 2DNA7YSNDEJTFHHPQNP and filename KWRWzcDhjrfcs2GK9G6p.csv is still being generated ". I hear yah! I know you'll "WHAT THE .......!!!!" :). This is actually a very good approach especially when the report being generated is huge. It puts a lot of flexibility to the frontend. However, the coding on the frontend becomes a little more complicated ... maybe! :) You can just keep on calling the second REST endpoint until you
 receive the file. This is what I'm actually doing but not via a for or while-loop. I'm exploting the power of Angulars' $httpProvider.interceptors. The other way cooler approach would be to put the resourceId in collection and have a small window somewhere in your app which will display clickable resourceIds :)
 
-POST and multiple GET requests
+
+### POST and multiple GET requests
 <figure>
     <a href="/images/restrequest.png"><img src="/images/restrequest.png"></a>
 </figure>
