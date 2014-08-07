@@ -1,0 +1,66 @@
+<!doctype html>
+<head>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script>
+
+        angular.module('myApp', [])
+                .controller('myCtrl', function ($scope, $http, $window) {
+
+                    $scope.sendPost = function() {
+
+                        $http({
+                            url: 'http://dev-baam.zatar.com/avatarids',
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            data: {
+                                "userresourceid" : "XXFCXGDJSUQISPDZ",
+                                "token" : "9a64b2f5-8d68-4dee-b1b6-3eb13bb2c31a",
+                                "tokenresourceid" : "M159JZDN2PG1UTYB",
+                                "startdate" : "2014-04-01",
+                                "enddate" : "2014-04-01",
+                                "avatarIdCollection": [
+                                    "JQS115",
+                                    "PKY398",
+                                    "QTR459"
+                                ]
+                            }
+                        }).success(function(data, status, headers, config) {
+                                    console.log(data);
+                                    $window.location.href = data.chartUrl+"?token=9a64b2f5-8d68-4dee-b1b6-3eb13bb2c31a&tokenresourceid=M159JZDN2PG1UTYB&userresourceid=XXFCXGDJSUQISPDZ";
+                                });
+                    }
+                })
+    </script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myCtrl">
+    <form ng-submit="sendPost()">
+        <h1>Third Party Application Transitioning to BAAM-UI Application</h1>
+        This will submit json formatted data to http://dev-baam.zatar.com/avatarids using POST method.<br/>
+        <br/>
+        data: {<br/>
+        "userresourceid" : "XXFCXGDJSUQISPDZ",<br/>
+        "token" : "9a64b2f5-8d68-4dee-b1b6-3eb13bb2c31a",<br/>
+        "tokenresourceid" : "M159JZDN2PG1UTYB",<br/>
+        "startdate" : "2014-04-01",<br/>
+        "enddate" : "2014-04-01",<br/>
+        "avatarIdCollection": [<br/>
+        "JQS115",<br/>
+        "PKY398",<br/>
+        "QTR459"<br/>
+        ]<br/>
+        }<br/>
+
+        <button type="submit">Submit Avatar IDs</button>
+    </form>
+
+</div>
+</body>
+</html>
