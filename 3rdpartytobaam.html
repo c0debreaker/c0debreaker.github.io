@@ -38,6 +38,7 @@
                         }).error(function(data, status, headers, config) {
                                     document.write("Uh-oh, that's not good!!!<br/>");
                                     document.write("HTTP ERROR CODE: " + data.statuscode + " HTTP ERROR MESSAGE: " + data.message);
+                                    document.write("<br/><br/>It failed because the hardcoded token and token resource id have already expired!")
                                     console.log(data);
                         });
                     }
