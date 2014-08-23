@@ -21,8 +21,8 @@
                             headers: { 'Content-Type': 'application/json' },
                             data: {
                                 "userresourceid" : "XXFCXGDJSUQISPDZ",
-                                "token" : "591a9603-f515-4c68-b6fc-5eaa916ca937",
-                                "tokenresourceid" : "977LV3SXIQL2KFXV",
+                                "token" : "9fdc2da6-134a-49ba-8dc1-d5b6780bf981",
+                                "tokenresourceid" : "MOFZC4Q183SN1G5R",
                                 "startdate" : "2014-05",
                                 "enddate" : "2014-06",
                                 "avatarIdCollection": [
@@ -33,7 +33,6 @@
                             }
                         }).success(function(data, status, headers, config) {
                                     console.log(data);
-//                                    $window.location.href = data.chartUrl+"?token=bcb36d7b-66eb-466d-a182-a4b866658f9e&tokenresourceid=NL66IMBJ9YSBVZ64&userresourceid=XXFCXGDJSUQISPDZ";
                                     $window.location.href = data.chartUrl;
                         }).error(function(data, status, headers, config) {
                                     document.write("Uh-oh, that's not good!!!<br/>");
