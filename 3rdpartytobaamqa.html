@@ -39,7 +39,7 @@
                                 "startdate" : $scope.auth.startdate,
                                 "enddate" : $scope.auth.enddate,
                                 "mode" : $scope.auth.mode,
-                                "avatarIdCollection": $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } )
+                                "avatarIdCollection": $scope.auth.avatarIds.length > 0 ? $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } ) : []
                             }
                         }).success(function(data, status, headers, config) {
                                     console.log(data);
