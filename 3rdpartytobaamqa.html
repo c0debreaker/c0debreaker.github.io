@@ -13,6 +13,8 @@
         angular.module('myApp', [])
                 .controller('myCtrl', function ($scope, $http, $window) {
 
+                    $scope.auth = { token : '3066b65a-4a17-47a6-9f42-7f3212c77da8', tokenresourceid : 'EQMSDKQDOW2X8582' };
+
                     $scope.sendPost = function() {
 
                         $http({
@@ -21,8 +23,8 @@
                             headers: { 'Content-Type': 'application/json' },
                             data: {
                                 "userresourceid" : "XXFCXGDJSUQISPDZ",
-                                "token" : "3066b65a-4a17-47a6-9f42-7f3212c77da",
-                                "tokenresourceid" : "EQMSDKQDOW2X8582",
+                                "token" : $scope.auth.token,
+                                "tokenresourceid" : $scope.auth.tokenresourceid,
                                 "startdate" : "2014-05-05",
                                 "enddate" : "2014-05-06",
                                 "mode" : "month",
@@ -49,9 +51,11 @@
         <h1>Third Party Application Transitioning to QA BAAM-UI Application</h1>
         This will submit json formatted data to https://integration-baam.zatar.com/avatarids using POST method.<br/>
         <br/>
+        Token:<input name="auth.token" ng-model="auth.token"><br/>
+        Token ResourceID:<input name="auth.tokenresourceid" ng-model="auth.tokenresourceid"><br/><br/>
         data: {<br/>
         "userresourceid" : "XXFCXGDJSUQISPDZ",<br/>
-        "token" : "0a7ea8c7-8cdd-4314-85d5-4fdee4ba7691",<br/>
+        "token" : "3066b65a-4a17-47a6-9f42-7f3212c77da8",<br/>
         "tokenresourceid" : "WGOFLWXDHUXJS884",<br/>
         "startdate" : "2014-05-05",<br/>
         "enddate" : "2014-05-06",<br/>
