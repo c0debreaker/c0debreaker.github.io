@@ -22,7 +22,9 @@
                         avatarIds : '-7829701006451461057,-2984738528086049257,-5090762470243487449,-3955313771749560179'
                     };
 
-                    $scope.avatarIds = $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } );
+                    $scope.$watch('auth.avatarIds', function(n,o){
+                        $scope.avatarIds = $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } );
+                    })
 
                     $scope.sendPost = function() {
 
@@ -72,9 +74,9 @@
         "startdate" : {{auth.startdate}},<br/>
         "enddate" : {{auth.enddate}},<br/>
         "mode" : {{auth.mode}},<br/>
-        "avatarIdCollection": [<br/>
+        "avatarIdCollection": <br/>
             {{avatarIds}}<br/>
-        ]<br/>
+        <br/>
         }<br/>
 
         <button type="submit">Submit Avatar IDs</button>
