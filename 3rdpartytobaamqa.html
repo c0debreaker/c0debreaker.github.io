@@ -22,9 +22,9 @@
                         avatarIds : '-7829701006451461057,-2984738528086049257,-5090762470243487449,-3955313771749560179'
                     };
 
-                    $scope.$watch('auth.avatarIds', function(n,o){
+                    $scope.$watch('auth.avatarIds', function(n, o) {
                         $scope.avatarIds = $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } );
-                    })
+                    });
 
                     $scope.sendPost = function() {
 
@@ -39,7 +39,7 @@
                                 "startdate" : $scope.auth.startdate,
                                 "enddate" : $scope.auth.enddate,
                                 "mode" : $scope.auth.mode,
-                                "avatarIdCollection": $scope.avatarIds.split(',').map(function(x) { return x.trim() } )
+                                "avatarIdCollection": $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } )
                             }
                         }).success(function(data, status, headers, config) {
                                     console.log(data);
