@@ -13,7 +13,16 @@
         angular.module('myApp', [])
                 .controller('myCtrl', function ($scope, $http, $window) {
 
-                    $scope.auth = { token : '3066b65a-4a17-47a6-9f42-7f3212c77da8', tokenresourceid : 'EQMSDKQDOW2X8582' };
+                    $scope.auth = {
+                        token : '3066b65a-4a17-47a6-9f42-7f3212c77da8',
+                        tokenresourceid : 'EQMSDKQDOW2X8582',
+                        startdate : '2014-05-01',
+                        enddate : '2014-05-01',
+                        mode : 'month',
+                        avatarIds : '-7829701006451461057,-2984738528086049257,-5090762470243487449,-3955313771749560179'
+                    };
+
+                    $scope.avatarIds = $scope.auth.avatarIds.split(',').map(function(x) { return x.trim() } );
 
                     $scope.sendPost = function() {
 
@@ -25,12 +34,10 @@
                                 "userresourceid" : "XXFCXGDJSUQISPDZ",
                                 "token" : $scope.auth.token,
                                 "tokenresourceid" : $scope.auth.tokenresourceid,
-                                "startdate" : "2014-05-05",
-                                "enddate" : "2014-05-06",
-                                "mode" : "month",
-                                "avatarIdCollection": [
-                                    "-7829701006451461057", "-2984738528086049257", "-5090762470243487449", "-3955313771749560179"
-                                ]
+                                "startdate" : $scope.auth.startdate,
+                                "enddate" : $scope.auth.enddate,
+                                "mode" : $scope.auth.mode,
+                                "avatarIdCollection": $scope.avatarIds.split(',').map(function(x) { return x.trim() } )
                             }
                         }).success(function(data, status, headers, config) {
                                     console.log(data);
@@ -52,16 +59,21 @@
         This will submit json formatted data to https://integration-baam.zatar.com/avatarids using POST method.<br/>
         <br/>
         Token:<input name="auth.token" ng-model="auth.token" size="50"><br/>
-        Token ResourceID:<input name="auth.tokenresourceid" ng-model="auth.tokenresourceid" size="50"><br/><br/>
+        Token ResourceID:<input name="auth.tokenresourceid" ng-model="auth.tokenresourceid" size="50">
+        startdate:<input name="auth.startdate" ng-model="auth.startdate" size="50">
+        enddate:<input name="auth.enddate" ng-model="auth.enddate" size="50">
+        mode(month|day):<input name="auth.mode" ng-model="auth.mode" size="50">
+        avatarIds:<input name="auth.avatarIds" ng-model="auth.avatarIds" size="50">
+        <br/><br/>
         data: {<br/>
         "userresourceid" : "XXFCXGDJSUQISPDZ",<br/>
         "token" : {{auth.token}},<br/>
         "tokenresourceid" : {{auth.tokenresourceid}},<br/>
-        "startdate" : "2014-05-05",<br/>
-        "enddate" : "2014-05-06",<br/>
-        "mode" : "month",<br/>
+        "startdate" : {{auth.startdate}},<br/>
+        "enddate" : {{auth.enddate}},<br/>
+        "mode" : {{auth.mode}},<br/>
         "avatarIdCollection": [<br/>
-        "-7829701006451461057", "-2984738528086049257", "-5090762470243487449", "-3955313771749560179"<br/>
+            {{avatarIds}}<br/>
         ]<br/>
         }<br/>
 
