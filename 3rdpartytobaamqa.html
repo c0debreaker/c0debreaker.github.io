@@ -44,7 +44,7 @@
                         }).success(function(data, status, headers, config) {
                                     console.log(data);
 //                                    $window.location.href = data.chartUrl;
-                                    var win = $window.open(data.chartUrl, '_blank'); win.focus();
+                                    var win = $window.open(data.chartUrl); win.focus();
 
                                 }).error(function(data, status, headers, config) {
                                     document.write("Uh-oh, that's not good!!!<br/>");
