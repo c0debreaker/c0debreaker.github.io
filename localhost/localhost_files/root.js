@@ -1,0 +1,2 @@
+window.Baam = {}
+window.GoogleCharts = {}

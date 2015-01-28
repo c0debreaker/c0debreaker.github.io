@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:9000/ -->
+<html><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<base href="/">--><base href=".">
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/ionicons.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/octicons.css">
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/select2/select2.css">
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/isteven-angular-multiselect/angular-multi-select.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/styles.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/loginform.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/odometer.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/gdreport.css">
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/ng-table/ng-table.css">
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/ngModal/dist/ng-modal.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/loading-bar.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/main.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/header.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/lato.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/ui-grid-unstable.css">
+    <link rel="stylesheet" href="http://localhost:9000/assets/css/mediaquery.css">
+      <script type="text/javascript">
+          (function() {
+              if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                  var msViewportStyle = document.createElement("style");
+                  msViewportStyle.appendChild(
+                          document.createTextNode("@-ms-viewport{width:auto!important}")
+                  );
+                  document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+              }
+          })();
+      </script>
+      <script type="text/javascript">
+          function reloadJavascriptLibrary(scriptName) {
+              var docHeadObj = document.getElementsByTagName("head")[0];
+              var dynamicScript = document.createElement("script");
+              dynamicScript.type = "text/javascript";
+              dynamicScript.src = scriptName;
+              docHeadObj.appendChild(dynamicScript);
+          }
+      </script>
+    <!-- endbuild -->
+  <script type="text/javascript" src="./localhost_files/jsapi"></script><script type="text/javascript" src="./localhost_files/saved_resource"></script><link type="text/css" href="./localhost_files/ui+en.css" rel="stylesheet"><script type="text/javascript" src="./localhost_files/format+en,default+en,ui+en,corechart+en.I.js"></script><link href="./localhost_files/tooltip.css" rel="stylesheet" type="text/css"></head>
+  <body ng-app="CockpitApplication" class="ng-scope">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!--<div ng-class="{ mainBody : $parent.mainbody.signedin, mainBodyFixed : $parent.mainbody.notyetsignedin  }">-->
+
+    <div class="mainBody ng-scope" ng-controller="MainBodyCtrl" ng-style="{position : mainbody.position}" style="position: absolute;">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><div ng-controller="HeaderCtrl" class="ng-scope">
+
+    <div ng-switch="" on="user.isAuthenticated">
+
+    <!-- ngSwitchWhen: false -->
+
+    <div class="sidebarLocale" ng-class="{ &#39;slide-out&#39; : boolChangeClass }">
+        <div id="languages" style="display: block;">
+            <h1>LANGUAGES</h1>
+            <!-- ngRepeat: singleCollection in availableLocales --><div ng-repeat="singleCollection in availableLocales" class="ng-scope">
+                <div ng-switch="" on="singleCollection.col">
+                <!-- ngSwitchWhen: 1 --><ul ng-switch-when="1" class="ng-scope">
+                    <!-- ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">DE</span>Deutsch</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope highLightLocale"><a href="" class="ng-binding"><span class="ng-binding">EN</span>English</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">NO</span>Nynorsk</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">ES</span>Español</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">FR</span>Français</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">IT</span>Italiano</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">NL</span>Nederlands</a></li><!-- end ngRepeat: language in singleCollection.languages -->
+                </ul>
+                <!-- ngSwitchWhen: 2 -->
+                </div>
+            </div><!-- end ngRepeat: singleCollection in availableLocales --><div ng-repeat="singleCollection in availableLocales" class="ng-scope">
+                <div ng-switch="" on="singleCollection.col">
+                <!-- ngSwitchWhen: 1 -->
+                <!-- ngSwitchWhen: 2 --><ul ng-switch-when="2" class="ng-scope">
+                    <!-- ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">JA</span>Japanese</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">GB</span>Britain</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">BR</span>Português</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">AR</span>Arabic</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">TR</span>Türkçe</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">RU</span>Русский</a></li><!-- end ngRepeat: language in singleCollection.languages --><li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }" class="ng-scope"><a href="" class="ng-binding"><span class="ng-binding">ZH</span>简体中文</a></li><!-- end ngRepeat: language in singleCollection.languages -->
+                </ul>
+                </div>
+            </div><!-- end ngRepeat: singleCollection in availableLocales -->
+        </div>
+    </div>
+
+    <!-- ngSwitchWhen: true --><div ng-switch-when="true" class="ng-scope">
+        <div class="col-md-12">
+            <!-- NAVIGATION BAR TOPMOST ROW -->
+            <div class="navbar-fixed-top">
+                <div id="topmenu" class="text col-md-12">
+                            <div id="cornercell" class="nav nav-pills pull-left">
+                                <span class="zatar-text icon-zatar-type"></span>
+                                <span class="zataranalytics">ANALYTICS</span>
+                                <!--<img class="zatarbaamgray">-->
+                            </div>
+                            <div id="accountSettings" class="nav nav-pills pull-right">
+                                <span ng-click="showCsvLogs()" id="processing">
+                                    <span><i ng-class="{ clockwise : $root.rotate }" class="bigCogwheel ionicons ion-gear-a"></i></span>
+                                    <span><i ng-class="{ counterclockwise : $root.rotate }" class="smallCogwheel ionicons ion-gear-a"></i></span>
+                                </span>
+                                <span class=""></span>
+                                    <span class="verticalLine"></span>
+                                    <span class="paddingright10px"><img width="32px" ng-src="assets/img/noface.png" src="./localhost_files/noface.png"></span>
+                                    <span class="dropdown" on-toggle="toggled(open)">
+                                        <a href="" class="dropdown-toggle " aria-haspopup="true" aria-expanded="false">
+                                            <span ng-show="user.isAuthenticated" class="ng-binding">qa@zatar.com</span>
+                                            <span class="rightPadding"><i class="ionicons ionicons ion-arrow-down-b classion-arrowdown"></i></span>
+                                        </a>
+                                        <ul id="accountSettingsDropdown" class="dropdown-menu squarecorners">
+                                            <!-- ngRepeat: choice in topHeaderDropDownMenus --><li ng-repeat="choice in topHeaderDropDownMenus" class="ng-scope">
+                                                <a class="dmSettings ng-binding" ui-sref="undefined">About Zatar</a>
+                                            </li><!-- end ngRepeat: choice in topHeaderDropDownMenus --><li ng-repeat="choice in topHeaderDropDownMenus" class="ng-scope">
+                                                <a class="dmSettings ng-binding" ui-sref="undefined">Report a problem</a>
+                                            </li><!-- end ngRepeat: choice in topHeaderDropDownMenus --><li ng-repeat="choice in topHeaderDropDownMenus" class="ng-scope">
+                                                <a class="dmSettings ng-binding" ui-sref="undefined">ANALYTICS Community</a>
+                                            </li><!-- end ngRepeat: choice in topHeaderDropDownMenus --><li ng-repeat="choice in topHeaderDropDownMenus" class="ng-scope">
+                                                <a class="dmSettings ng-binding" ui-sref="undefined">Account Settings</a>
+                                            </li><!-- end ngRepeat: choice in topHeaderDropDownMenus --><li ng-repeat="choice in topHeaderDropDownMenus" class="ng-scope">
+                                                <a class="dmSettings ng-binding" ui-sref="logout">Logout</a>
+                                            </li><!-- end ngRepeat: choice in topHeaderDropDownMenus -->
+                                        </ul>
+                                    </span>
+                                    <span class="localeSettings ng-binding" ng-click="showLocaleSettingsPane()">EN</span>
+                                    <span class="paddingleft10px ng-scope" ng-controller="OnlineStatusController">
+                                        <i style="color:rgb(76, 201, 76);font-size:20px" class="monitorNetwork glyphicon glyphicon-signal"></i>
+                                    </span>
+                            </div>
+                            <div id="toggleLeftNavi" class="nav nav-pills">
+                                <span class="paddingright10px" ng-click="showOdometerControlPanel()">
+                                    <i class="mega-octicon octicon-three-bars"></i>
+                                </span>
+                                <span class="localeSettings ng-binding" ng-click="showLocaleSettingsPane()">EN</span>
+                            </div>
+                    <div class="bluegreenbar"></div>
+                </div>
+            </div>
+
+            <div id="parentcontainer" class="row">
+                <!-- LEFT NAVIGATION BAR -->
+                <div id="side-bar-nav" class="text col-md-2">
+                    <div class="sidebar-nav-fixed">
+                        <div ng-controller="NavigationCtrl" class="ng-scope">
+                            <div class="classAnalyticsDashboard">
+                                <div>Analytics Dashboard<i class="pull-right fa faCaretColor"></i></div>
+                            </div>
+                            <accordion close-others="true" class="accordionContainer"><div class="panel-group" ng-transclude="">
+                                <!-- ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classPrinterAnalytics&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="fa fa-print" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;Printer Analytics<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuRTPJ" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Time
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuOdometers" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Odometers
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuBattery" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Memory
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuPrinthead" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Real Time Print Job
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuPrinthead" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Battery
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuPrinthead" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Printhead
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classMobileAnalytics&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="glyphicons glyphicons-iphone" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;Mobile Analytics<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classSensorData&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="glyphicons glyphicons-iphone" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;Sensor Data<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classGIAnalytics&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="glyphicons glyphicons-iphone" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;GI Analytics<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classUsage&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="fa fa-align-left fa-rotate-270" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;Usage<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classReporting&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="glyphicon glyphicon-wrench" style="font-size : "></i>&nbsp;&nbsp;&nbsp;Reporting<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classSettings&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide --><div ng-switch-when="hide" class="ng-binding ng-scope">
+                                                <i class="fa fa-cogs" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;Settings
+                                            </div>
+                                            <!-- ngSwitchWhen: show -->
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 --><div class="panel panel-default ng-isolate-scope" ng-repeat="menu in leftNavMenusUIv2" is-disabled="menu.disabled" is-open="isopen" ng-class="{ &#39;classApps&#39; : isopen}">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" accordion-transclude="heading">
+                                        <div ng-switch="" on="menu.glyphiconShow" class="ng-scope">
+                                            <!-- ngSwitchWhen: hide -->
+                                            <!-- ngSwitchWhen: show --><div ng-switch-when="show" class="ng-scope">
+                                                <div class="ng-binding"><i class="glyphicon glyphicon-earphone" style="font-size : 1.3em"></i>&nbsp;&nbsp;&nbsp;Apps<i class="pull-right glyphicon submenu glyphicon-chevron-right" ng-class="{&#39;glyphicon-chevron-down&#39;: isopen, &#39;glyphicon-chevron-right&#39;: !isopen }"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+                                    <div class="ng-scope"><accordion-heading></accordion-heading></div>
+                                    <!-- ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router --><div ng-switch-when="ui-router" class="ng-scope">
+                                                <span class="dottedbar"></span>
+                                                    <div id="subMenuBilling" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Billing
+                                                        <i class="pull-right fa faCaretColor" ng-class="{&#39;fa-caret-left&#39;: isOneHighlight(submenus)}"></i>
+                                                    </div>
+                                            </div>
+                                            <!-- ngSwitchWhen: static -->
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus --><div ng-repeat="submenus in menu.submenus" class="ng-scope">
+                                        <div ng-switch="" on="submenus.linktype">
+                                            <!-- ngSwitchWhen: ui-router -->
+                                            <!-- ngSwitchWhen: static --><div ng-switch-when="static" class="ng-scope">
+                                                <a class="dottedbar textsref" href="http://api.zatar.com/" target="zatarpage"><div id="subMenuZatar" class="submenu ng-binding" ng-class="{highlight: isOneHighlight(submenus)}" ng-click="updateOneSpan(submenus)">Zatar</div></a>
+                                            </div>
+                                        </div>
+                                    </div><!-- end ngRepeat: submenus in menu.submenus -->
+                                </div>
+  </div>
+</div><!-- end ngRepeat: menu in leftNavMenusUIv2 -->
+                            </div></accordion>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mainpane" class="text col-md-10">
+                    <!-- uiView: mainpane --><div id="main" class="row ng-scope" ui-view="mainpane">
+                        <div class="col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                            <div id="tabledataactivitystream" class="col-md-12">
+                                <!-- uiView: performance-ui-view --><div ui-view="performance-ui-view" class="ng-scope"><div id="content" class="ng-scope">
+<div id="content" ng-controller="OdometerCtrl" class="ng-scope">
+    <!--<div>-->
+        <!--<h4 class="odometerHeader">-->
+            <!--<i class="ionicons ion-speedometer classion-speedometer"></i>-->
+            <!--<span class="odometerTitleHeader">Odometers</span>-->
+        <!--</h4>-->
+    <!--</div>-->
+
+    <div class="col-md-12 odometerPanel">
+        <div class="panel-heading-duration">
+            <div class="HourDurationCtrl">
+                <div class="col-md-6 col-sm-6 paddingbottom5px">
+
+                <span class="btn-group inchesPrinted" dropdown="">
+                    <button type="button" class="btn btn-primary dropdown-toggle ng-binding" ng-disabled="disableButtons" ng-class="{disableText: disableButtons}" aria-haspopup="true" aria-expanded="false">
+                        Inches Printed <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu squarecorners">
+                        <!-- ngRepeat: choice in printerTypes --><li ng-repeat="choice in printerTypes" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="setOdometerPanel(choice.mode)" ng-class="{ highLightMenu : choice.mode == printerType }" class="ng-binding highLightMenu" aria-haspopup="true" aria-expanded="false">Inches Printed
+                                <i class="pull-right ionicons ion-checkmark" ng-class="{ &#39;ion-checkmark&#39; : choice.mode == printerType }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in printerTypes --><li ng-repeat="choice in printerTypes" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="setOdometerPanel(choice.mode)" ng-class="{ highLightMenu : choice.mode == printerType }" class="ng-binding" aria-haspopup="true" aria-expanded="false">RFID Count - Valid/Fail
+                                <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : choice.mode == printerType }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in printerTypes -->
+                    </ul>
+                </span>
+
+                    <span class="fivePxOnLeft">View by:</span>
+
+                <span class="fivePxOnLeft btn-group" dropdown="">
+                    <button type="button" class="btn btn-primary dropdown-toggle ng-binding" ng-disabled="disableButtons" ng-class="{disableText: disableButtons}" aria-haspopup="true" aria-expanded="false">
+                        Device <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu squarecorners">
+                        <!-- ngRepeat: choice in grouping --><li ng-repeat="choice in grouping" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="selectModelOrLocation(choice.mode)" ng-class="{ highLightMenu : choice.mode == $parent.currentGrouping }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Model
+                                <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : choice.mode == $parent.currentGrouping }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in grouping --><li ng-repeat="choice in grouping" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="selectModelOrLocation(choice.mode)" ng-class="{ highLightMenu : choice.mode == $parent.currentGrouping }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Location
+                                <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : choice.mode == $parent.currentGrouping }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in grouping --><li ng-repeat="choice in grouping" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="selectModelOrLocation(choice.mode)" ng-class="{ highLightMenu : choice.mode == $parent.currentGrouping }" class="ng-binding highLightMenu" aria-haspopup="true" aria-expanded="false">Device
+                                <i class="pull-right ionicons ion-checkmark" ng-class="{ &#39;ion-checkmark&#39; : choice.mode == $parent.currentGrouping }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in grouping -->
+                    </ul>
+                </span>
+
+                     <span class="fivePxOnLeft btn-group" ng-class="{flashText: flashEnabled}" dropdown="" ng-click="stopFlash(&#39;dropdown&#39;)"><span class="multiSelect inlineBlock ng-isolate-scope" multi-select="" input-model="avatarIdDeviceCollection" button-label="icon name" item-label="icon displayName" tick-property="ticked" max-labels="0" search-key="name location serialNumber model type" disable-dropdown="false" disable-property="checkboxDisabled"><button type="button" ng-disabled="dropdownDisable()" ng-class="{dropdownDisable : dropdownDisable()}" class="button multiSelectButton ng-binding" ng-click="toggleCheckboxes( $event ); refreshSelectedItems(); refreshButton();" ng-bind-html="varButtonLabel" style="">(Total: 1)<span class="caret"></span></button><div class="checkboxLayer"><form class="ng-pristine ng-valid"><!-- ngIf: displayHelper( 'filter' ) || displayHelper( 'all' ) || displayHelper( 'none' ) || displayHelper( 'reset' ) --><div class="helperContainer ng-scope" ng-if="displayHelper( &#39;filter&#39; ) || displayHelper( &#39;all&#39; ) || displayHelper( &#39;none&#39; ) || displayHelper( &#39;reset&#39; )"><!-- ngIf: displayHelper( 'all' ) || displayHelper( 'none' ) || displayHelper( 'reset' ) --><div class="line ng-scope" ng-if="displayHelper( &#39;all&#39; ) || displayHelper( &#39;none&#39; ) || displayHelper( &#39;reset&#39; )"><!-- ngIf: !isDisabled && displayHelper( 'all' ) --><button type="button" ng-click="select( &#39;all&#39;,   $event );" class="helperButton ng-scope" ng-if="!isDisabled &amp;&amp; displayHelper( &#39;all&#39; )">   ✓&nbsp; Select All</button><!-- end ngIf: !isDisabled && displayHelper( 'all' ) --> <!-- ngIf: !isDisabled && displayHelper( 'none' ) --><button type="button" ng-click="select( &#39;none&#39;,  $event );" class="helperButton ng-scope" ng-if="!isDisabled &amp;&amp; displayHelper( &#39;none&#39; )">  ×&nbsp; Select None</button><!-- end ngIf: !isDisabled && displayHelper( 'none' ) --></div><!-- end ngIf: displayHelper( 'all' ) || displayHelper( 'none' ) || displayHelper( 'reset' ) --><!-- ngIf: displayHelper( 'filter' ) --><div class="line ng-scope" style="position:relative" ng-if="displayHelper( &#39;filter&#39; )"><input placeholder="Search..." type="text" ng-click="select( &#39;filter&#39;, $event )" ng-model="inputLabel.labelFilter" ng-change="updateFilter();$scope.getFormElements();" class="inputFilter ng-pristine ng-valid"><button type="button" class="clearButton" ng-click="inputLabel.labelFilter=&#39;&#39;;updateFilter();prepareGrouping();prepareIndex();select( &#39;clear&#39;, $event )">×</button> </div><!-- end ngIf: displayHelper( 'filter' ) --></div><!-- end ngIf: displayHelper( 'filter' ) || displayHelper( 'all' ) || displayHelper( 'none' ) || displayHelper( 'reset' ) --><div class="checkBoxContainer" style=""><!-- ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;R110xi4 Online Printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN320 Online 588</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope selected vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )" checked="checked"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZD500R Online Qa room2</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --><span class="tickMark ng-scope" ng-if="item[ groupProperty ] !== true &amp;&amp; item[ tickProperty ] === true">✔</span><!-- end ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN320 Online 218 t</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN420 Online</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZT230 Online printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;GX420D Best Printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;Office printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;RZ400 Online  </span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;IMZ320 Printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;HC100 Online Printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test S4M printer23</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;tesyt234</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test2</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test5</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test 7</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test 6</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test6</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test5</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test4</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test3</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test2</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;test1</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;Joe Testing Avatar</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;zPrinter</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN320 Online 975</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLn220 - 87645455</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;110xi4 Online Printer 1</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;105slPlus Online </span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN320 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;JustAnotherLongNameTestHereForZCUI-45438 JustAnot  . . .</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;iMZ220 Online device</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;R110xi4 Zinjas Online</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN320 WIFI </span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;RZ600 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZT420R Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;Zt410R Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;QLN220 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZT420 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZT410 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZM600 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;170xi4 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;105Sl Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;105SL plus</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;S4M Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;ZM400 Claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;GX420T claimed</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;GX420D claimed printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --><div ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem ng-scope vertical" ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}" ng-click="syncItems( item, $event, $index );" ng-mouseleave="removeFocusStyle( tabIndex );"><!-- ngRepeat: i in numberToArray( item[ spacingProperty ] ) track by $index --><div class="acol"><label><input class="checkbox focusable" type="checkbox" ng-disabled="itemIsDisabled( item )" ng-checked="item[ tickProperty ]" ng-click="syncItems( item, $event, $index )"><span ng-class="{disabled:itemIsDisabled( item )}" ng-bind-html="writeLabel( item, &#39;itemLabel&#39; )" class="ng-binding">&nbsp;<img src="./localhost_files/printer.png">&nbsp;110xi4 Zinjas Online printer</span></label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- ngIf: item[ groupProperty ] !== true && item[ tickProperty ] === true --></div><!-- end ngRepeat: item in filteredModel | filter:removeGroupEndMarker --></div></form></div></span></span>
+
+                </div>
+                <div class="col-md-6 col-sm-6 paddingbottom5px">
+
+                <span class="btn-group" dropdown="">
+                    <button type="button" class="btn btn-primary dropdown-toggle ng-binding" ng-disabled="disableCalendar" ng-class="{disableText: disableCalendar}" aria-haspopup="true" aria-expanded="false">
+                        Month <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu squarecorners">
+                        <!-- ngRepeat: choice in dayOrMonth --><li ng-repeat="choice in dayOrMonth" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="selectedMonthorDay(choice.name)" ng-class="{ highLightMenu : choice.name == modeMonthOrDay }" class="ng-binding highLightMenu" aria-haspopup="true" aria-expanded="false">Month
+                                <i class="pull-right ionicons ion-checkmark" ng-class="{ &#39;ion-checkmark&#39; : choice.name == modeMonthOrDay }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in dayOrMonth --><li ng-repeat="choice in dayOrMonth" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="selectedMonthorDay(choice.name)" ng-class="{ highLightMenu : choice.name == modeMonthOrDay }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Day
+                                <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : choice.name == modeMonthOrDay }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in dayOrMonth --><li ng-repeat="choice in dayOrMonth" class="ng-scope">
+                            <a dropdown-toggle="" ng-click="selectedMonthorDay(choice.name)" ng-class="{ highLightMenu : choice.name == modeMonthOrDay }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Custom
+                                <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : choice.name == modeMonthOrDay }"></i>
+                            </a>
+                        </li><!-- end ngRepeat: choice in dayOrMonth -->
+                    </ul>
+                </span>
+
+                <span ng-switch="" on="modeMonthOrDay">
+                    <!-- ngSwitchWhen: Month --><span ng-switch-when="Month" class="ng-scope">
+                         <span>
+                             <button type="button" class="btn btn-default squarecorners btnMonth" ng-click="openCalendarBox($event, &#39;calendar&#39;, &#39;&#39;)" ng-disabled="disableCalendar">
+                                 <i class="glyphicon glyphicon-calendar"></i>
+                             </button>
+
+                             <input type="text" class="btn-group datepickerClass datePickerPosition ng-isolate-scope ng-pristine ng-valid ng-valid-required ng-valid-date" ng-change="captureDate()" datepicker-popup="MMM-yyyy" ng-model="$root.dt" is-open="model.calendar" show-button-bar="false" min-date="$parent.minDate" max-date="$parent.maxDate" datepicker-options="$parent.dateOptionsMonth" ng-required="true" close-text="Close" min-mode="month" datepicker-mode="&#39;month&#39;" disabled="" ng-class="{disableText: disableCalendar}" required="required" style=""><ul class="dropdown-menu ng-pristine ng-valid ng-valid-date ng-valid-date-disabled" ng-style="{display: (isOpen &amp;&amp; &#39;block&#39;) || &#39;none&#39;, top: position.top+&#39;px&#39;, left: position.left+&#39;px&#39;}" ng-keydown="keydown($event)" datepicker-popup-wrap="" ng-model="date" ng-change="dateSelection()" style="display: none;">
+	<li ng-transclude=""><div ng-switch="datepickerMode" role="application" ng-keydown="keydown($event)" datepicker="" year-format="&#39;yyyy&#39;" starting-day="0" show-weeks="false" datepicker-mode="&#39;month&#39;" min-mode="month" multidate="true" multi-date="true" min-date="minDate" max-date="maxDate" class="ng-isolate-scope">
+  <!-- ngSwitchWhen: day -->
+  <!-- ngSwitchWhen: month --><table role="grid" aria-labelledby="datepicker-052-5477-title" aria-activedescendant="datepicker-052-5477-0" ng-switch-when="month" tabindex="0">
+  <thead>
+    <tr>
+      <th><button type="button" class="btn btn-default btn-sm pull-left" ng-click="move(-1)" tabindex="-1"><i class="glyphicon glyphicon-chevron-left"></i></button></th>
+      <th><button id="datepicker-052-5477-title" role="heading" aria-live="assertive" aria-atomic="true" type="button" class="btn btn-default btn-sm" ng-click="toggleMode()" tabindex="-1" style="width:100%;"><strong class="ng-binding">2015</strong></button></th>
+      <th><button type="button" class="btn btn-default btn-sm pull-right" ng-click="move(1)" tabindex="-1"><i class="glyphicon glyphicon-chevron-right"></i></button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-0" aria-disabled="false">
+        <button type="button" style="width:100%;" class="btn btn-default btn-info active" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding text-info">January</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-1" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">February</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-2" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">March</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-3" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">April</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-4" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">May</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-5" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">June</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-6" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">July</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-7" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">August</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-8" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">September</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index --><tr ng-repeat="row in rows track by $index" class="ng-scope">
+      <!-- ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-9" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">October</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-10" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">November</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date --><td ng-repeat="dt in row track by dt.date" class="text-center ng-scope" role="gridcell" id="datepicker-052-5477-11" aria-disabled="true">
+        <button type="button" style="width:100%;" class="btn btn-default" ng-class="{&#39;btn-info&#39;: dt.selected, active: isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1" disabled="disabled"><span ng-class="{&#39;text-info&#39;: dt.current}" class="ng-binding">December</span></button>
+      </td><!-- end ngRepeat: dt in row track by dt.date -->
+    </tr><!-- end ngRepeat: row in rows track by $index -->
+  </tbody>
+</table>
+  <!-- ngSwitchWhen: year -->
+</div></li>
+	<!-- ngIf: showButtonBar -->
+</ul>
+                         </span>
+
+                            <span class="btn-group" dropdown="">
+                                <button type="button" class="btn btn-primary dropdown-toggle ng-binding" ng-disabled="disableCalendar" ng-class="{disableText: disableCalendar}" aria-haspopup="true" aria-expanded="false">
+                                    ------ <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu squarecorners">
+                                    <!-- ngRepeat: choice in weeks --><li ng-repeat="choice in weeks" class="ng-scope">
+                                        <a dropdown-toggle="" ng-click="selectedWeekRange($index)" ng-class="{ highLightMenu : weekNum == $index }" class="ng-binding highLightMenu" aria-haspopup="true" aria-expanded="false">------
+                                            <i class="pull-right ionicons ion-checkmark" ng-class="{ &#39;ion-checkmark&#39; : weekNum == $index}"></i>
+                                        </a>
+                                    </li><!-- end ngRepeat: choice in weeks --><li ng-repeat="choice in weeks" class="ng-scope">
+                                        <a dropdown-toggle="" ng-click="selectedWeekRange($index)" ng-class="{ highLightMenu : weekNum == $index }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Week 1
+                                            <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : weekNum == $index}"></i>
+                                        </a>
+                                    </li><!-- end ngRepeat: choice in weeks --><li ng-repeat="choice in weeks" class="ng-scope">
+                                        <a dropdown-toggle="" ng-click="selectedWeekRange($index)" ng-class="{ highLightMenu : weekNum == $index }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Week 2
+                                            <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : weekNum == $index}"></i>
+                                        </a>
+                                    </li><!-- end ngRepeat: choice in weeks --><li ng-repeat="choice in weeks" class="ng-scope">
+                                        <a dropdown-toggle="" ng-click="selectedWeekRange($index)" ng-class="{ highLightMenu : weekNum == $index }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Week 3
+                                            <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : weekNum == $index}"></i>
+                                        </a>
+                                    </li><!-- end ngRepeat: choice in weeks --><li ng-repeat="choice in weeks" class="ng-scope">
+                                        <a dropdown-toggle="" ng-click="selectedWeekRange($index)" ng-class="{ highLightMenu : weekNum == $index }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Week 4
+                                            <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : weekNum == $index}"></i>
+                                        </a>
+                                    </li><!-- end ngRepeat: choice in weeks --><li ng-repeat="choice in weeks" class="ng-scope">
+                                        <a dropdown-toggle="" ng-click="selectedWeekRange($index)" ng-class="{ highLightMenu : weekNum == $index }" class="ng-binding" aria-haspopup="true" aria-expanded="false">Week 5
+                                            <i class="pull-right ionicons" ng-class="{ &#39;ion-checkmark&#39; : weekNum == $index}"></i>
+                                        </a>
+                                    </li><!-- end ngRepeat: choice in weeks -->
+                                </ul>
+                            </span>
+                    </span>
+
+                    <!-- ngSwitchWhen: Day -->
+
+                    <!-- ngSwitchWhen: Custom -->
+
+
+                </span>
+                    <span id="exportButton" class="onePixBorder" ng-click="retrieveCsvReport()" ng-class="{disableText: disableCalendar}"><i class="fa fa-share"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12 no-padding"></div>
+    <!-- ngRepeat: device in deviceModel --><div ng-repeat="device in deviceModel" class="ng-scope">
+        <div class="col-md-6  padding10px">
+            <div class="widget enable-top-radius chartProperties">
+                <div class="widget-title enable-top-radius dark-gray-title">
+                    <h4>
+                            <span class="alignleft">
+                                <!--<i class="fa fa-circle" ng-style="{ color : device.dotColor }"></i><span class="padding5px">Inches Printed</span><span class="padding5px">|</span><span class="padding5px" popover="{{device.modelOrLocation | uppercase}}" popover-trigger="mouseenter">{{ device.modelOrLocation | uppercase }}</span>-->
+                                <i class="fa fa-circle" ng-style="{ color : device.dotColor }" style="color: rgb(102, 153, 152);"></i><span class="padding5px ng-binding">Inches Printed</span><span class="padding5px">|</span><span class="padding5px ng-scope ng-binding" popover="ZD500R Online Qa room2" popover-trigger="mouseenter">ZD500R Online Qa room2</span>
+                            </span>
+                    </h4>
+                    <span class="alignright ng-binding">QA ROOM2</span>
+                    <div style="clear: both;" class="padding5px"></div>
+                </div>
+                <div class="widget-body">
+                    <div class="GoogleChartClass ng-isolate-scope" google-chart="" chart="device.chart" on-select="seriesSelected(selectedItem, $index)" style="position: relative;"><div dir="ltr" style="position: relative; width: 532px; height: 200px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="532" height="200" aria-label="A chart." aria-hidden="true" style="overflow: hidden;"><defs id="defs"><clippath id="_ABSTRACT_RENDERER_ID_1"><rect x="75" y="38" width="382" height="124"></rect></clippath></defs><rect x="0" y="0" width="532" height="200" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="75" y="38" width="382" height="124" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_1)"><g><rect x="75" y="161" width="382" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="120" width="382" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="79" width="382" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="38" width="382" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="78" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="90" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="103" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="115" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="128" y="69" width="7" height="92" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="140" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="153" y="118" width="7" height="43" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="165" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="178" y="148" width="7" height="13" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="190" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="203" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="215" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="228" y="157" width="7" height="4" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="240" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="253" y="124" width="7" height="37" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="265" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="278" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="290" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="303" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="315" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="328" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="340" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="353" y="157" width="7" height="4" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="365" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="378" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="390" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect><rect x="403" y="161" width="7" height="0" stroke="none" stroke-width="0" fill="#669998"></rect></g><g><rect x="75" y="38" width="1" height="124" stroke="none" stroke-width="0" fill="#333333"></rect><rect x="75" y="161" width="382" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="81.74590163934427" y="178.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">Jan 1</text></g><g><text text-anchor="middle" x="169.18852459016392" y="178.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">Jan 8</text></g><g><text text-anchor="middle" x="269.12295081967216" y="178.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">Jan 16</text></g><g><text text-anchor="middle" x="369.05737704918033" y="178.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">Jan 24</text></g><g><text text-anchor="middle" x="456.5" y="178.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">Jan 31</text></g><g><text text-anchor="end" x="64" y="165.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="64" y="124.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">15</text></g><g><text text-anchor="end" x="64" y="83.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">30</text></g><g><text text-anchor="end" x="64" y="42.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">45</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><tbody><tr><th>datetime</th><th>odometerInchesPrinted</th></tr>
+<tr><td>Thu Jan 01 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Fri Jan 02 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Sat Jan 03 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Sun Jan 04 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Mon Jan 05 2015 00:00:00 GMT-0600 (CST)</td><td>34</td></tr>
+<tr><td>Tue Jan 06 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Wed Jan 07 2015 00:00:00 GMT-0600 (CST)</td><td>16</td></tr>
+<tr><td>Thu Jan 08 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Fri Jan 09 2015 00:00:00 GMT-0600 (CST)</td><td>5</td></tr>
+<tr><td>Sat Jan 10 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Sun Jan 11 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Mon Jan 12 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Tue Jan 13 2015 00:00:00 GMT-0600 (CST)</td><td>2</td></tr>
+<tr><td>Wed Jan 14 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Thu Jan 15 2015 00:00:00 GMT-0600 (CST)</td><td>14</td></tr>
+<tr><td>Fri Jan 16 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Sat Jan 17 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Sun Jan 18 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Mon Jan 19 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Tue Jan 20 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Wed Jan 21 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Thu Jan 22 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Fri Jan 23 2015 00:00:00 GMT-0600 (CST)</td><td>2</td></tr>
+<tr><td>Sat Jan 24 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Sun Jan 25 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Mon Jan 26 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+<tr><td>Tue Jan 27 2015 00:00:00 GMT-0600 (CST)</td><td>0</td></tr>
+</tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 210px; left: 542px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">16 inches</div><div></div></div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 no-padding chartInfoBox ng-binding">January 2015</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                <div class="col-md-4 col-sm-4 col-xs-4 odometerChartFooter">
+                    <div class="odometerFooterFieldValue ng-binding" ng-bind="device.leftCellNumber | number">15</div>
+                    <div class="odometerFooterFieldKey ng-binding" ng-bind="device.leftCellText">Avg. Inches/wk</div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 odometerChartFooter">
+                    <div class="odometerFooterFieldValue ng-binding" ng-bind="device.middleCellNumber | number">73</div>
+                    <div class="odometerFooterFieldKey ng-binding" ng-bind="device.middleCellText">Total Inches Printed</div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 odometerChartFooter">
+                    <div class="odometerFooterFieldValue ng-binding" ng-bind="device.rightCellNumber | number">1</div>
+                    <div class="odometerFooterFieldKey ng-binding" ng-bind="device.rightCellText">Device Connected</div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end ngRepeat: device in deviceModel -->
+</div>
+</div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+    <div class="resourceNotFound ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.resourceNotFound" width="75%" height="150px" dialog-title="DATA NOT FOUND" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 150px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">DATA NOT FOUND</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <!--<span class="warning-sign"></span>-->
+        <div class="modalMessage ng-scope">There is no data available for the date range selected. Please try your selection again</div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideRNFModal()">Close</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="loadingSpinner ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.loadingSpinner" width="75%" height="150px" dialog-title="PROCESSING DATA" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 150px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">PROCESSING DATA</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">Please wait while data is being retrieved and prepared.</div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideLSModal()">Close</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="loadingSpinner ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.generatingCsvReport" width="350px" height="450px" dialog-title="PROCESSING CSV REPORT" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 350px; height: 450px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">PROCESSING CSV REPORT</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">
+            <p>Processing request, please wait. Below is the list of report IDs that are still being generated.</p>
+            <div class="reportIdContainer">
+                <ul style="list-style-type:none">
+                <!-- ngRepeat: reportId in $root.csvRequestCollection -->
+                </ul>
+            </div>
+        </div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideCSVModal()">Close</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="loadingSpinner ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.noProcess" width="75%" height="150px" dialog-title="NO PROCESS" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 150px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">NO PROCESS</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">
+            <p>There are no processes at this time.</p>
+        </div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideNoProcessModal()">Close</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="loadingSpinner ng-modal ng-isolate-scope ng-hide" ng-show="show" ng-class="{ hideCsvProperties : fadeItOut }" show="$parent.modalDialogs.showReportDetails" width="500px" height="260px" dialog-title="DETAILS FOR REPORT " on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 500px; height: 260px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">DETAILS FOR REPORT </span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">
+            <p><span class="detailedReportIdKey">REPORT ID :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+            <p><span class="detailedReportIdKey">MODE :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+            <p><span class="detailedReportIdKey">START DATE :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+            <p><span class="detailedReportIdKey">END DATE :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+            <p><span class="detailedReportIdKey">TIMEZONE :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+            <p><span class="detailedReportIdKey">TOKEN :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+            <p><span class="detailedReportIdKey">USER ID :</span> &nbsp;<span class="detailedReportIdValue ng-binding"></span></p>
+        </div>
+    </div>
+  </div>
+</div>
+
+    <div class="loadingSpinner ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.moreThan30" width="75%" height="150px" dialog-title="DATE RANGE GREATER THAN 30 DAYS" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 150px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">DATE RANGE GREATER THAN 30 DAYS</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">Please expect delays in generating results for time periods exceeding 30 days or more, would you like to proceed?</div>
+        <div class="ContinueButton ng-scope"><button class="btn" ng-click="$parent.continueGT30DaysModal()">Continue</button></div>
+        <div class="CancelButton ng-scope"><button class="btn" ng-click="$parent.cancelGT30DaysModal()">Cancel</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="redAlert ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.invalidWeekRange" width="75%" height="150px" dialog-title="WEEK RANGE NOT APPLICABLE" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 150px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">WEEK RANGE NOT APPLICABLE</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">Week chosen does not apply for this month. Pick another week.</div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideIWRodal()">Close</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="redAlert ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.unknownError" width="75%" height="250px" dialog-title="SYSTEM ERROR OCCURRED" on-close="logClose()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 250px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">SYSTEM ERROR OCCURRED</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">
+            <p>There was an error processing your request. Please check debugger and rerun the task(s) that made it fail. Finally, please report any issues that you may find to baam-ops@zatar.com.</p>
+            <p>Error(s):</p>
+            <p class="redAlert ng-binding"></p>
+        </div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideUEModal()">Close</button></div>
+    </div>
+  </div>
+</div>
+
+    <div class="redAlert ng-modal ng-isolate-scope ng-hide" ng-show="show" show="$parent.modalDialogs.tokenExpired" width="75%" height="150px" dialog-title="SESSION EXPIRED" on-close="redirectLoginScreen()">
+  <div class="ng-modal-overlay"></div>
+  <div class="ng-modal-dialog" ng-style="dialogStyle" style="width: 75%; height: 150px;">
+    <span class="ng-modal-title ng-binding" ng-show="dialogTitle &amp;&amp; dialogTitle.length" ng-bind="dialogTitle">SESSION EXPIRED</span>
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <div ng-bind-html="closeButtonHtml" class="ng-binding"><i class="glyphicon glyphicon-remove-circle"></i></div>
+    </div>
+    <div class="ng-modal-dialog-content" ng-transclude="">
+        <div class="modalMessage ng-scope">Your session has expired! Please sign-in again.</div>
+        <div class="OkButton ng-scope"><button class="btn" ng-click="hideTEModal()">Close</button></div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+    </div>
+     <!--Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <!--<script>-->
+       <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+       <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+       <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+       <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+
+       <!--ga('create', 'UA-XXXXX-X');-->
+       <!--ga('send', 'pageview');-->
+    <!--</script>-->
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <script>
+        if (/*@cc_on!@*/false) {
+            var headHTML = document.getElementsByTagName('head')[0].innerHTML;
+            headHTML += '<link type="text/css" rel="stylesheet" href="assets/css/ie.css">';
+            document.getElementsByTagName('head')[0].innerHTML = headHTML;
+        }
+    </script>
+
+    <!-- AngularJS and components thereof -->
+    <script type="text/javascript" src="./localhost_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-resource.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-route.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-animate.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-ui-router.min.js"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+    <script type="text/javascript" src="./localhost_files/sockjs-0.3.min.js"></script>
+    <!--<script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>-->
+
+    <!-- build:js assets/js/vendor.js -->
+    <script src="./localhost_files/bootstrap.js"></script>
+    <script src="./localhost_files/lodash.compat.js"></script>
+    <script src="./localhost_files/restangular.js"></script>
+    <script src="./localhost_files/ng-table.js"></script>
+    <script src="./localhost_files/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="./localhost_files/jstz.min.js"></script>
+    <!--<script src="assets/js/vendor/ng-google-chart.js"></script>-->
+    <script src="./localhost_files/ng-google-chart.js"></script>
+    <script src="./localhost_files/angular-multi-select.js"></script>
+    <script src="./localhost_files/ng-modal.js"></script>
+    <script src="./localhost_files/loading-bar.js"></script>
+    <script src="./localhost_files/ui-grid-unstable.js"></script>
+    <script src="./localhost_files/tmhDynamicLocale.min.js"></script>
+    <script src="./localhost_files/angular-strap.min.js"></script>
+    <script src="./localhost_files/angular-strap.tpl.min.js"></script>
+    <script src="./localhost_files/moment.js"></script>
+    <!--<script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>-->
+    <!-- endbuild -->
+
+    <!-- build:js assets/js/all.min.js -->
+    <script src="./localhost_files/root.js"></script>
+    <script src="./localhost_files/chartsettings.js"></script>
+    <script src="./localhost_files/injectors.js"></script>
+    <script src="./localhost_files/lang.js"></script>
+    <script src="./localhost_files/siteconfig.js"></script>
+    <script src="./localhost_files/propertymaps.js"></script>
+    <script src="./localhost_files/specfuncs.js"></script>
+    <script src="./localhost_files/grapherfuncs.js"></script>
+    <script src="./localhost_files/focus.js"></script>
+    <script src="./localhost_files/router.js"></script>
+    <script src="./localhost_files/rest-controller.js"></script>
+    <script src="./localhost_files/navigator.js"></script>
+    <script src="./localhost_files/csvexport.js"></script>
+    <script src="./localhost_files/chartfactories.js"></script>
+    <script src="./localhost_files/avatarsfactories.js"></script>
+    <script src="./localhost_files/httpintercept.js"></script>
+    <script src="./localhost_files/socketfactory.js"></script>
+    <script src="./localhost_files/charting.js"></script>
+    <script src="./localhost_files/odometers.js"></script>
+    <script src="./localhost_files/gdreporter.js"></script>
+    <script src="./localhost_files/json2gc.js"></script>
+    <script src="./localhost_files/user.js"></script>
+    <script src="./localhost_files/login.js"></script>
+    <script src="./localhost_files/logout.js"></script>
+    <script src="./localhost_files/header.js"></script>
+    <script src="./localhost_files/primuswithemit.js"></script>
+    <script src="./localhost_files/modal.js"></script>
+    <script src="./localhost_files/networkchecker.js"></script>
+    <script src="./localhost_files/filters.js"></script>
+    <!-- endbuild -->
+<!-- livereload script -->
+<script type="text/javascript">document.write('<script src="http://'
+ + (location.host || 'localhost').split(':')[0]
+ + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+</script><script src="./localhost_files/livereload.js" type="text/javascript"></script>
+
+
+</body></html>
