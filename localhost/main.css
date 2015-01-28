@@ -1,0 +1,103 @@
+body {
+    /*font-family: "Open Sans",Arial,Helvetica,Sans-Serif;*/
+    /*font-family: "Open Sans";*/
+    font-family: "Lato";
+    font-size: 14px;
+    line-height: 1.1;
+    overflow-x: hidden;
+}
+
+.mainBody {
+    /*background-color: #ffcc33;*/
+    /*position: absolute;*/
+    top: 0px;
+    bottom: 0px;
+    width:100%;
+    background: #747474; /* Old browsers */
+    /*background: -moz-linear-gradient(top,  #ffcc33 0%, #bc9625 28%, #111111 100%); *//* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffcc33), color-stop(28%,#bc9625), color-stop(100%,#111111)); *//* Chrome,Safari4+ */
+    /*background: -webkit-linear-gradient(top,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* Chrome10+,Safari5.1+ */
+    /*background: -o-linear-gradient(top,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* Opera 11.10+ */
+    /*background: -ms-linear-gradient(top,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* IE10+ */
+    /*background: linear-gradient(to bottom,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* W3C */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc33', endColorstr='#111111',GradientType=0 ); *//* IE6-9 */
+
+}
+
+.mainBodyFixed {
+    /*background-color: #ffcc33;*/
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width:100%;
+    background: #747474; /* Old browsers */
+    /*background: -moz-linear-gradient(top,  #ffcc33 0%, #bc9625 28%, #111111 100%); *//* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffcc33), color-stop(28%,#bc9625), color-stop(100%,#111111)); *//* Chrome,Safari4+ */
+    /*background: -webkit-linear-gradient(top,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* Chrome10+,Safari5.1+ */
+    /*background: -o-linear-gradient(top,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* Opera 11.10+ */
+    /*background: -ms-linear-gradient(top,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* IE10+ */
+    /*background: linear-gradient(to bottom,  #ffcc33 0%,#bc9625 28%,#111111 100%); *//* W3C */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc33', endColorstr='#111111',GradientType=0 ); *//* IE6-9 */
+
+}
+
+.fullnameDecor {
+    color: white;
+    font-size: 1.1em;
+    top: 0px;
+    letter-spacing: 0.08em;
+}
+
+#accountSettings > .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /*left: -4px;*/
+    z-index: 1000;
+    float: right;
+    min-width: 200px;
+    padding: 0px 0;
+    /*margin: 10px 0px 0;*/
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0px;
+    /*border: 1px;*/
+    /*border: 1px solid CECECE;*/
+    /*border: 1px solid rgba(0, 0, 0, .15);*/
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    text-align: left;
+}
+
+#accountSettings > .dropdown-menu > li > a.dmSettings {
+    display: block;
+    padding: 7px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+ul#accountSettingsDropdown {
+    top: 34px;
+    margin-right: 13px;
+    left: -20px;
+}
+
+.classAnalyticsDashboard {
+    padding: 19px 10px 19px 10px;
+    background: #505c5c;
+    text-align: center;
+    font-size: 1em;
+    font-family: Arial;
+    letter-spacing: 2px;
+}
+
+.bluegreenbar {
+    background: rgb(102, 153, 153);
+    width: 100%;
+    padding: 4px 0px 4px 0px;
+}

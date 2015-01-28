@@ -1,0 +1,365 @@
+.sidebarLocale {
+    -moz-transition: right 1s;
+    -webkit-transition: right 1s;
+    -o-transition: right 1s;
+    transition: right 1s;
+    width: 284px;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    bottom: 0px;
+    /* left: -100px; */
+    right: -284px;
+    height : 300px;
+}
+
+.slide-out {
+    -moz-transition: right 1s;
+    -webkit-transition: rightm 1s;
+    -o-transition: right 1s;
+    transition: right 1s;
+    right: 0px;
+
+}
+
+#languages {
+    position: absolute;
+    background-color: rgba(17, 19, 20,0.9);
+    float: right;
+    top: 41px;
+    /* right: 65px; */
+    padding-bottom: 13px;
+    display: none;
+    z-index: 2000;
+    right: 0px;
+    /* max-width: 600px; */
+    /* min-width: 140px; */
+    /* width: auto; */
+    width: 284px;
+}
+#languages div ul {
+    margin-top: 13px;
+    width: 142px;
+    border-right: 1px solid rgba(255,255,255,0.10);
+    float: left;
+}
+
+element.style {
+}
+#languages div ul li {
+    padding: 10px 16px 10px 23px;
+    line-height: 15px;
+    /*height: 15px;*/
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+
+
+#languages div ul li a {
+    color: white;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+#languages div ul li:hover {
+    background-color: rgb(124, 124, 124);
+    color : white;
+}
+
+.highLightLocale {
+    background: rgb(88, 87, 75);
+}
+
+.tempHighLight {
+    background: rgb(88, 87, 75);
+}
+
+#languages div ul li a span {
+    margin-right: 15px;
+    text-transform: uppercase;
+    width: 17px;
+    float: left;
+}
+
+#languages h1 {
+    color: #505050;
+    display: block;
+    font-size: 14px;
+    line-height: 38px;
+    background-color: #C5B173;
+    padding: 4px 0 0 25px;
+}
+
+span.localeSettings {
+    border-style: solid;
+    border-color: #505050;
+    border-width: 1px;
+    padding: 4px 4px 4px 4px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 6px;
+    background-color: #C5B173; /*#ffcc33; */
+    color: rgb(82, 82, 82);
+    font-weight: bold;
+}
+
+span.rightPadding {
+    padding-right: 0px;
+}
+
+
+i.monitorNetwork.glyphicon.glyphicon-signal {
+    /*margin-top: 6px;*/
+    /*right: -12px;*/
+    padding-right: 13px;
+    top: 6px;
+}
+
+.loadingSpinner > .ng-modal-dialog {
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: #454C5C;
+    box-shadow: 4px 4px 80px #000;
+    -webkit-box-shadow: 4px 4px 80px #000;
+    -moz-box-shadow: 4px 4px 80px #000;
+    -ms-box-shadow: 4px 4px 80px #000;
+    -o-box-shadow: 4px 4px 80px #000;
+    padding: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 6px;
+}
+
+.resourceNotFound > .ng-modal-dialog {
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: #6B4D4D;
+    box-shadow: 4px 4px 80px #000;
+    -webkit-box-shadow: 4px 4px 80px #000;
+    -moz-box-shadow: 4px 4px 80px #000;
+    -ms-box-shadow: 4px 4px 80px #000;
+    -o-box-shadow: 4px 4px 80px #000;
+    padding: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 6px;
+}
+
+.redAlert > .ng-modal-dialog {
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: #6B4D4D;
+    box-shadow: 4px 4px 80px #000;
+    -webkit-box-shadow: 4px 4px 80px #000;
+    -moz-box-shadow: 4px 4px 80px #000;
+    -ms-box-shadow: 4px 4px 80px #000;
+    -o-box-shadow: 4px 4px 80px #000;
+    padding: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 6px;
+}
+
+.loadingSpinner > div > span.ng-modal-title.ng-binding {
+    color: rgb(75, 123, 185);
+    font-size: 16px;
+    border-bottom: 0;
+}
+
+.resourceNotFound > div > span.ng-modal-title.ng-binding {
+    color: rgb(207, 83, 83);
+    font-size: 16px;
+    border-bottom: 0;
+}
+
+.redAlert > div > span.ng-modal-title.ng-binding {
+    color: rgb(207, 83, 83);
+    font-size: 16px;
+    border-bottom: 0;
+}
+
+.OkButton {
+    /* text-align: right; */
+    /* margin-right: 21px; */
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.ContinueButton {
+    /* text-align: right; */
+    /* margin-right: 21px; */
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+}
+
+.CancelButton {
+    /* text-align: right; */
+    /* margin-right: 21px; */
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+div.modalMessage {
+    position: relative;
+    color: #d5d5d5;
+}
+
+.verticalLine {
+    border-left: thin solid #555555;
+    padding: 20px 0px 20px 0px;
+    border-right: thin solid #999999;
+    margin-right: 10px;
+}
+
+.reportIdContainer {
+    display: inline-block;
+    width: 275px;
+    height: 250px;
+    overflow-y: auto;
+    background: rgb(118, 118, 118);
+    position: relative;
+    top: 10px;
+    left: 17px;
+    border: rgb(55, 55, 55);
+    border-width: 1px;
+    border-style: solid;
+    padding: 7px 0px 0px 10px;
+}
+
+.reportIdLiProperties {
+    padding : 5px 0px 0px 0px;
+}
+
+.detailedReportIdKey {
+    font-weight: bold;
+}
+
+.detailedReportIdValue {
+    font-weight: lighter;
+}
+
+.enablePointerCursor {
+    cursor: pointer;
+}
+
+.ng-modal-overlay {
+    opacity: 0.6;
+}
+
+.hideCsvProperties {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.clockwise {
+    -webkit-animation: rotation 5s infinite linear;
+    -moz-animation: rotation 5s infinite linear 0s;
+    -ms-animation: rotation 5s infinite linear 0s;
+    -o-animation: rotation 5s infinite linear 0s;
+}
+
+.counterclockwise {
+    -webkit-animation: crotation 2s infinite linear;
+    -moz-animation: crotation 2s infinite linear 0s;
+    -ms-animation: crotation 2s infinite linear 0s;
+    -o-animation: crotation 2s infinite linear 0s;
+}
+
+/* Chrome */
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+@-webkit-keyframes crotation {
+    from {-webkit-transform: rotate(359deg);}
+    to   {-webkit-transform: rotate(0deg);}
+}
+
+/* Firefox */
+@-moz-keyframes rotation {
+    from {-moz-transform: rotate(0deg);}
+    to   {-moz-transform: rotate(359deg);}
+}
+
+@-moz-keyframes crotation {
+    from {-moz-transform: rotate(359deg);}
+    to   {-moz-transform: rotate(0deg);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rotation {
+    from {-ms-transform: rotate(0deg); transform: rotate(0deg);}
+    to   {-ms-transform: rotate(359deg); transform: rotate(359deg);}
+}
+
+@-ms-keyframes crotation {
+    from {-ms-transform: rotate(359deg); transform: rotate(359deg);}
+    to   {-ms-transform: rotate(0deg); transform: rotate(0deg);}
+}
+
+/* other browser */
+@-o-keyframes rotation {
+    from {-o-transform: rotate(0deg); transform: rotate(0deg);}
+    to   {-o-transform: rotate(359deg); transform: rotate(359deg);}
+}
+
+@-o-keyframes crotation {
+    from {-o-transform: rotate(359deg); transform: rotate(359deg);}
+    to   {-o-transform: rotate(0deg); transform: rotate(0deg);}
+}
+
+
+i.smallCogwheel {
+    display: inline-block;
+    font-size: 1.5em;
+    position: relative;
+    top: -4px;
+    right: 8px;
+    margin-top: -12px;
+}
+
+i.bigCogwheel {
+    display: inline-block;
+    font-size: 2em;
+    position: relative;
+    top: 10px;
+    margin-top: -12px;
+}
+
+span#processing {
+    right: 10px;
+    top: -1px;
+    position: relative;
+}

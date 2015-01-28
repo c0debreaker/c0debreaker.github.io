@@ -1,0 +1,1223 @@
+ /*Responsive properties*/
+
+ /*
+    Note(s)
+
+        1. .mainBody will be kept commented out. It's great for troubleshooting devices
+
+ */
+
+@media only screen and (min-width: 320px) and (orientation : portrait),
+       only screen and (max-width: 767px) and (orientation : landscape){
+    /*.mainBody {*/
+        /*background: #282828;*/
+    /*}*/
+
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 2.85em;
+        font-weight: 300;
+        color: black;
+        top: -16px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 10em;
+        color: #ffcc33;
+        top : 31px;
+    }
+
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /* none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+     /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 12em;
+        top: 31px;
+        position: relative;
+    }
+
+    .header > span.baamheader {
+        font-size: 3.5em;
+        top: -25px;
+        position: relative;
+        left: -2px;
+    }
+
+    .zatarbaamgray {
+        width: 254px;
+        margin-top: -6px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        height: 73px;
+    }
+
+    div.grapharea, div.panel-heading-duration {
+        font-size: 11px;
+    }
+    h4.odometerHeader {
+        display: none;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+
+    .dropdown-menu {
+        font-size: 11px;
+    }
+
+    .datepickerClass {
+        font-size: 11px;
+        height: 29px;
+    }
+
+    input.datepickerClass.datePickerPosition {
+        /*top: 1px;*/
+        left: 6px;
+        width: 27%;
+    }
+
+    span#exportButton {
+        display: none;
+    }
+    .inchesPrinted {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 480px) and (orientation : landscape) {
+    /*.mainBody {*/
+        /*background: #a378a3;*/
+    /*}*/
+    #headerwrapper {
+         margin-top: -188px;
+    }
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 2.85em;
+        font-weight: 300;
+        color: black;
+        top: -16px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 10em;
+        color: #ffcc33;
+        top : 31px;
+    }
+    /*body {*/
+    /*overflow:hidden;*/
+    /*}*/
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /* none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 12em;
+        top: 31px;
+        position: relative;
+    }
+
+    .header > span.baamheader {
+        font-size: 3.5em;
+        top: -25px;
+        position: relative;
+        left: -2px;
+    }
+    .zatarbaamgray {
+        margin-top: -0px; /* was -5px*/
+        width: 254px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        height: 86px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation : landscape) {
+    /*.mainBody {*/
+        /*background: #007ea3;*/
+    /*}*/
+    #headerwrapper {
+        margin-top: -188px;
+    }
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 2.85em;
+        font-weight: 300;
+        color: black;
+        top: -16px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 10em;
+        color: #ffcc33;
+        top : 31px;
+    }
+    /*body {*/
+    /*overflow:hidden;*/
+    /*}*/
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /* none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 12em;
+        top: 31px;
+        position: relative;
+    }
+
+    .header > span.baamheader {
+        font-size: 3.5em;
+        top: -25px;
+        position: relative;
+        left: -2px;
+    }
+    .zatarbaamgray {
+        margin-top: -6px; /* was -5px*/
+        width: 254px;
+    }
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px) and (orientation : portrait),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px) and (orientation : portrait),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px) and (orientation : portrait),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px) and (orientation : portrait),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px) and (orientation : portrait),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) and (orientation : portrait) {
+
+    /*.mainBody {*/
+        /*background: #ffd657;*/
+    /*}*/
+
+    #headerwrapper { margin-top: -225px; }
+
+
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 3.75em;
+        font-weight: 300;
+        color: black;
+        top: -29px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 13em;
+        color: #ffcc33;
+    }
+    /*body {*/
+    /*overflow:hidden;*/
+    /*}*/
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /* none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+    .zatarbaamgray {
+        /*width: 0;*/
+        margin-top: 5px;
+    }
+    .inchesPrinted {
+        display: none;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px) and (orientation : landscape),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px) and (orientation : landscape),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px) and (orientation : landscape),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px) and (orientation : landscape),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px) and (orientation : landscape),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) and (orientation : landscape) {
+
+    /*.mainBody {*/
+        /*background: #ffd657;*/
+    /*}*/
+
+    #headerwrapper { margin-top: -178px; }
+
+
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 3.75em;
+        font-weight: 300;
+        color: black;
+        top: -29px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 13em;
+        color: #ffcc33;
+    }
+    /*body {*/
+    /*overflow:hidden;*/
+    /*}*/
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /*  none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+    .zatarbaamgray {
+        width: 254px;
+        margin-top: 0px; /* was -5px*/
+    }
+    .inchesPrinted {
+        display: none;
+    }
+
+}
+
+@media only screen  and (min-width : 768px) {
+    /*.mainBody {*/
+        /*background: #ff0001;*/
+    /*}*/
+    /*.zatarbaamgray {*/
+        /*margin-top: -5px;*/
+    /*}*/
+
+    #headerwrapper { margin-top: -270px; }
+
+    .odometerPanel {
+        display: block;
+    }
+
+    #cornercell {
+        text-align: left;
+    }
+
+    #accountSettings {
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+        padding-bottom: 2px;
+        padding-right: 25px;
+    }
+    #toggleLeftNavi {
+        display: none;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 7.9em;
+        font-weight: 300;
+        color: black;
+        top: -101px;
+        position: relative;
+        left: 3px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 28em;
+        color: #ffcc33;
+    }
+    #accountSettings > .dropdown-menu {
+        margin: 59px 21px 0;
+    }
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+    .col-sm-3 {
+        width: 20%;
+        float: left;
+    }
+    h4.subcharttitle {
+        font-size: 11px;
+    }
+    .panel-default > .panel-heading > .panel-title {
+        font-size: 9px;
+    }
+    input.datepickerClass.datePickerPosition {
+        /*top: 1px;*/
+    }
+
+    .datepickerClass {
+        height: 29px;
+        font-size: 11px;
+        width: 90px;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+
+    div.grapharea, div.panel-heading-duration {
+        font-size: 11px;
+        height: 55px;
+    }
+
+    .onePixBorder {
+        padding: 6px 10px 8px 10px;
+        font-size: 11px;
+    }
+    div#content {
+        padding: 0px 20px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+    div.submenu {
+        padding: 10px 10px 15px 46px;
+        font-size: 11px;
+    }
+    .zatarbaamgray {
+        width: 254px;
+        margin-top: 10px;
+    }
+
+
+}
+/*Ipad in landscape*/
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : landscape) {
+    /*.mainBody {*/
+        /*background: #4fffa1;*/
+    /*}*/
+}
+
+/* IPad in portrait*/
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : portrait) {
+    /*.mainBody {*/
+        /*background: #00ffe1;*/
+    /*}*/
+    .inchesPrinted {
+        display: block;
+    }
+}
+
+@media only screen and (min-width : 992px)  {
+    /*.mainBody {*/
+        /*background: #0008ff;*/
+    /*}*/
+    #parentcontainer {
+        background-color: #414141;
+        margin-top: 60px;
+    }
+    #toggleLeftNavi {
+        display: none;
+    }
+    #accountSettings {
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+        padding-bottom: 2px;
+        padding-right: 25px;
+    }
+    #accountSettings > .dropdown-menu {
+        margin: 11px 21px 0;
+    }
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+    h4.subcharttitle {
+        font-size: 11px;
+    }
+    .panel-default > .panel-heading > .panel-title {
+        font-size: 11px;
+    }
+    input.datepickerClass.datePickerPosition {
+        /*top: 1px;*/
+    }
+
+    .datepickerClass {
+        height: 29px;
+        font-size: 11px;
+        width: 110px;
+    }
+    div#side-bar-nav {
+        display: block;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        font-size: 11px;
+    }
+    .onePixBorder {
+        padding: 6px 14px 8px 14px;
+        font-size: 11px;
+    }
+    div#content {
+       padding: 0px 24px;
+    }
+    /*reducing rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    div.submenu {
+        padding: 10px 10px 15px 46px;
+        font-size: 11px;
+    }
+}
+
+/* iPads (landscape) or desktop with 1024px ----------- */
+@media only screen  and (min-width : 1024px)  {
+    /*.mainBody {*/
+        /*background: #529b8c;*/
+    /*}*/
+    #headerwrapper { margin-top: -270px; }
+    .header > span.baamheader {
+        top: -131px;
+    }
+
+    .panel-default > .panel-heading > .panel-title {
+        font-size: 11px;
+    }
+
+    input.datepickerClass.datePickerPosition {
+        /*top: 1px;*/
+    }
+
+    .datepickerClass {
+        height: 29px;
+        font-size: 11px;
+        width: 110px;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        font-size: 11px;
+    }
+    .onePixBorder {
+        padding: 6px 14px 8px 14px;
+        font-size: 11px;
+    }
+    div#content {
+        padding: 0px 10px;
+    }
+    /*reducing rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    div.submenu {
+        padding: 10px 10px 15px 46px;
+        font-size: 11px;
+    }
+}
+
+@media only screen  and (min-width : 1200px)  {
+    /*.mainBody {*/
+        /*background: #b5d592;*/
+    /*}*/
+    #headerwrapper { margin-top: -270px; }
+
+    .panel-default > .panel-heading > .panel-title {
+        font-size: 14px;
+    }
+
+    #accountSettings {
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+        padding-bottom: 2px;
+        padding-right: 25px;
+    }
+    #toggleLeftNavi {
+        display: none;
+    }
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+
+    input.datepickerClass.datePickerPosition {
+        /*top: 0px;*/
+    }
+
+    .datepickerClass {
+        height: 34px;
+        font-size: 14px;
+        width: 110px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        font-size: 14px;
+    }
+    .onePixBorder {
+        /*border-width: 1px;*/
+        /*border-style: solid;*/
+        /*border-color: #c6c6c6;*/
+        padding: 7px 14px 8px 14px;
+        /*left: 5px;*/
+        /*position: relative;*/
+        font-size: 14px;
+    }
+    div#content {
+        padding: 0px 10px;
+    }
+    .enable-top-radius {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -17px;
+        left: 0;
+        font-size: 13px;
+    }
+    div.submenu {
+        padding : 10px 10px 10px 46px;
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (min-width : 1440px)  {
+    /*.mainBody {*/
+        /*background: #747474;*/
+    /*}*/
+    #headerwrapper { margin-top: -270px; }
+    .panel-default > .panel-heading > .panel-title {
+        font-size: 14px;
+    }
+
+    #accountSettings {
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+        padding-bottom: 2px;
+        padding-right: 25px;
+    }
+    #toggleLeftNavi {
+        display: none;
+    }
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+
+    input.datepickerClass.datePickerPosition {
+        /*top: 0px;*/
+    }
+
+    .datepickerClass {
+        height: 34px;
+        font-size: 14px;
+        width: 110px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        font-size: 14px;
+    }
+    .onePixBorder {
+        /*border-width: 1px;*/
+        /*border-style: solid;*/
+        /*border-color: #c6c6c6;*/
+        padding: 7px 14px 8px 14px;
+        /*left: 5px;*/
+        /*position: relative;*/
+        font-size: 14px;
+    }
+    div#content {
+        padding: 0px 10px;
+    }
+    .enable-top-radius {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -17px;
+        left: 0;
+        font-size: 14px;
+    }
+
+}
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.3),*/
+/*only screen and ( min-resolution: 192dpi),*/
+/*only screen and ( min-resolution: 2dppx) {*/
+
+
+
+@-webkit-viewport {
+    width:device-width
+}
+@-moz-viewport {
+    width:device-width
+}
+@-ms-viewport {
+    width:device-width
+}
+@-o-viewport {
+    width:device-width
+}
+@viewport {
+    width:device-width
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 768px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (                min-resolution: 192dpi) and (min-width: 768px) and (orientation : portrait),
+only screen and (                min-resolution: 2dppx)  and (min-width: 768px) and (orientation : portrait) {
+
+
+    #headerwrapper { margin-top: -225px; }
+
+    /*.mainBody {*/
+        /*background: #9e99bd;*/
+    /*}*/
+
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 3.75em;
+        font-weight: 300;
+        color: black;
+        top: -30px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 13em;
+        color: #ffcc33;
+    }
+    /*body {*/
+    /*overflow:hidden;*/
+    /*}*/
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /* none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+    .zatarbaamgray {
+        width: 254px;
+        margin-top: 0px; /* was -5px */
+    }
+    div.grapharea, div.panel-heading-duration {
+        height: 55px;
+    }
+    .inchesPrinted {
+        display: block;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 768px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 768px),
+only screen and (                min-resolution: 192dpi) and (min-width: 768px) and (orientation : landscape),
+only screen and (                min-resolution: 2dppx)  and (min-width: 768px) and (orientation : landscape) {
+
+
+    /*#headerwrapper { margin-top: -151px; }*/
+
+    /*.mainBody {*/
+        /*background: #45455a;*/
+    /*}*/
+
+    #parentcontainer {
+        background-color: #e4e4e4;
+        margin-top: 60px;
+    }
+
+    #cornercell {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    #accountSettings {
+        display: none;
+        text-align: right;
+    }
+    #toggleLeftNavi {
+        display: block;
+        text-align: right;
+        margin-top: 11px;
+        margin-right: 15px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+    }
+    div#side-bar-nav {
+        display: none;
+    }
+    .header > span.baamheader {
+        font-size: 3.75em;
+        font-weight: 300;
+        color: black;
+        top: -61px;
+        position: relative;
+        left: -2px;
+    }
+    .header > span.zebra-logo.icon-zatar-type {
+        font-size: 13em;
+        color: #ffcc33;
+    }
+    /*body {*/
+    /*overflow:hidden;*/
+    /*}*/
+    .nonscrollable {
+        overflow:hidden;
+    }
+    .odometerPanel {
+        display: block; /* none; */
+    }
+    div#content {
+        padding: 0px 0px;
+    }
+    /*disabling rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    h4.odometerHeader > i.ionicons.ion-speedometer.classion-speedometer {
+        font-size: 24px;
+    }
+    h4.odometerHeader {
+        margin-left: 15px;
+    }
+    span.odometerTitleHeader {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    span.odometerChartFooterAttr {
+        position: relative;
+        top: -23px;
+        font-size: 11px;
+        left: -8px;
+    }
+    .inchesPrinted {
+        display: block;
+    }
+
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 992px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 992px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 992px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 992px),
+only screen and (                min-resolution: 192dpi) and (min-width: 992px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 992px) {
+    #parentcontainer {
+        background-color: #414141;
+        margin-top: 60px;
+    }
+    #toggleLeftNavi {
+        display: none;
+    }
+    #accountSettings {
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+        padding-bottom: 2px;
+        padding-right: 25px;
+    }
+    #accountSettings > .dropdown-menu {
+        margin: 11px 21px 0;
+    }
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+    h4.subcharttitle {
+        font-size: 11px;
+    }
+    .panel-default > .panel-heading > .panel-title {
+        font-size: 11px;
+    }
+    input.datepickerClass.datePickerPosition {
+        /*top: 1px;*/
+    }
+
+    .datepickerClass {
+        height: 29px;
+        font-size: 11px;
+        width: 110px;
+    }
+    div#side-bar-nav {
+        display: block;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+    div.grapharea, div.panel-heading-duration {
+        font-size: 11px;
+    }
+    .onePixBorder {
+        padding: 6px 14px 8px 14px;
+        font-size: 11px;
+    }
+    div#content {
+        padding: 0px 24px;
+    }
+    /*reducing rounded top corners*/
+    .enable-top-radius {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    div.submenu {
+        padding: 10px 10px 15px 46px;
+        font-size: 11px;
+    }
+    .nonscrollable {
+        overflow:hidden;
+    }
+
+}
+
+/*Ipad in landscape*/
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : landscape) {
+    /*.mainBody {*/
+        /*background: #ff1399;*/
+    /*}*/
+    .header > span.baamheader {
+        top: -132px;
+        left: 3px;
+    }
+    .inchesPrinted {
+        display: block;
+    }
+}
+
+@media screen and (-ms-high-contrast : active), (-ms-high-contrast : none) {
+     /* IE10+ specific styles go here */
+}
+

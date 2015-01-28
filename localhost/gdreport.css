@@ -1,0 +1,18 @@
+#parentContainer {
+    width: 100%;
+    /*height: auto !important;*/
+    /*min-height: 100%;*/
+    /*margin: 0 auto;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    height: 650px;
+}
+
+button#gdreportid {
+    float: right;
+}
+
+.hideGrid {
+    display : none;
+}
+
