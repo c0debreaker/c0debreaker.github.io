@@ -43,15 +43,15 @@ This afternoon, I decided to refactor it since it was an eyesore. Here is the ne
 # Refactored code, uses ng-repeat and ng-switch
 {% highlight js %}
     <div class="sidebarLocale" ng-class="{ 'slide-out' : boolChangeClass }">
-        <div id="languages">
+        <div id="languages" style="display: block;">
             <h1>LANGUAGES</h1>
-            <div ng-repeat="locale in localeCollection">
+            <div ng-repeat="singleCollection in availableLocales">
                 <div ng-switch on="singleCollection.col">
                 <ul ng-switch-when="1">
-                    <li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }"><a href=""><span>{{language.locale | uppercase}}</span>{{language.language}}</a></li>
+                    <li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == userData.locale }"><a href=""><span>{{language.locale | uppercase}}</span>{{language.language}}</a></li>
                 </ul>
                 <ul ng-switch-when="2">
-                    <li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == user.locale }"><a href=""><span>{{language.locale | uppercase}}</span>{{language.language}}</a></li>
+                    <li ng-repeat="language in singleCollection.languages" ng-click="selectLocale(language.locale)" ng-class="{ highLightLocale: language.locale == userData.locale }"><a href=""><span>{{language.locale | uppercase}}</span>{{language.language}}</a></li>
                 </ul>
                 </div>
             </div>
