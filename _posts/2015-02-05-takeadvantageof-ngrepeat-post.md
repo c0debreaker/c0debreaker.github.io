@@ -6,7 +6,7 @@ tags: [javascript, angularjs, ngRepeat, factories]
 comments: true
 ---
 
-I thought it git push this topic but I didn't. Should have posted back in July 2014. LOL! Anyways, you just can't stop when a programming language like AngularJS makes your coding an extremely enjoyable experience! I really love AngularJS! It's so friggin powerful!
+I thought I published this topic last year but I didn't. Should have posted back in July 2014. LOL! Anyways, you just can't stop when a programming language like AngularJS makes your coding an extremely enjoyable experience! I really love AngularJS! It's so friggin powerful!
 
 I needed to add a language selector on the app I'm developing so users can switch to the locale/language they prefer. AngularJS comes with $locale files and you'll have to reference to each file to load it. I'm using lgalfasos' [Angular Dynamic Locale](https://github.com/lgalfaso/angular-dynamic-locale) to dynamically change locales. Here is something I wrote quick. You can also use "track by" and update the model by making it a collection (yourModel.yourProperty[yourEachItemKeyFromNGRepeat]).
 
