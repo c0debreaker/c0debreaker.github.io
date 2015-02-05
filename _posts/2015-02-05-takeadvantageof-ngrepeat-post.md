@@ -35,7 +35,8 @@ I needed to add a language selector on the app I'm developing so users can switc
             </ul>
         </div>
     </div>
-{% highlight %}
+{% endhighlight %}
+
 
 This afternoon, I decided to refactor it since it was an eyesore. Here is the new code.
 
@@ -56,7 +57,7 @@ This afternoon, I decided to refactor it since it was an eyesore. Here is the ne
             </div>
         </div>
     </div>
-{% highlight %}
+{% endhighlight %}
 
 ### $scope.availableLocales
 {% highlight js %}
@@ -86,7 +87,7 @@ $scope.availableLocales = [
         ]
     }
 ];
-{% highlight %}
+{% endhighlight %}
 
 ### In case you're interested in what selectLocale does
 {% highlight js %}
@@ -104,7 +105,7 @@ $scope.selectLocale = function(locale) {
     $scope.model.selectedItem = locale;
     $scope.selectionClass = "";
 }
-{% highlight %}
+{% endhighlight %}
 
 
 ### Language selector screenshot
