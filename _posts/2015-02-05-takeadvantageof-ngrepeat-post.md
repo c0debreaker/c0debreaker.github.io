@@ -61,32 +61,32 @@ This afternoon, I decided to refactor it since it was an eyesore. Here is the ne
 
 ### $scope.availableLocales
 {% highlight js %}
-$scope.availableLocales = [
-    {
-        col : 1,
-        languages: [
-            { locale : 'de', language : 'Deutsch'},
-            { locale : 'en', language : 'English'},
-            { locale : 'no', language : 'Nynorsk'},
-            { locale : 'es', language : 'Español'},
-            { locale : 'fr', language : 'Français'},
-            { locale : 'it', language : 'Italiano'},
-            { locale : 'nl', language : 'Nederlands'}
-        ]
-    },
-    {
-        col : 2,
-        languages: [
-            { locale : 'pl', language : 'Polski'},
-            { locale : 'pt', language : 'Português'},
-            { locale : 'br', language : 'Português'},
-            { locale : 'fi', language : 'Suomi'},
-            { locale : 'tr', language : 'Türkçe'},
-            { locale : 'ru', language : 'Русский'},
-            { locale : 'cn', language : '简体中文'}
-        ]
-    }
-];
+    $scope.availableLocales = [
+        {
+            col : 1,
+            languages: [
+                { locale : 'de', language : 'Deutsch'},
+                { locale : 'en', language : 'English'},
+                { locale : 'no', language : 'Nynorsk'},
+                { locale : 'es', language : 'Español'},
+                { locale : 'fr', language : 'Français'},
+                { locale : 'it', language : 'Italiano'},
+                { locale : 'nl', language : 'Nederlands'}
+            ]
+        },
+        {
+            col : 2,
+            languages: [
+                { locale : 'ja', language : 'Japanese'},
+                { locale : 'gb', language : 'Britain'},
+                { locale : 'br', language : 'Português'},
+                { locale : 'ar', language : 'Arabic'},
+                { locale : 'tr', language : 'Türkçe'},
+                { locale : 'ru', language : 'Русский'},
+                { locale : 'zh', language : '简体中文'}
+            ]
+        }
+    ];
 {% endhighlight %}
 
 ### In case you're interested in what selectLocale does
