@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Take advantage of ngRepeat
-description: "Refactoring hardcoded values in your templates!!! Feb 5, 2015"
+description: "Refactoring hardcoded values in your templates!!! Feb 5"
 tags: [javascript, angularjs, ngRepeat, factories]
 comments: true
 ---
