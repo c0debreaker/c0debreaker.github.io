@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to intercept and react to HTTP 401 error expired tokens
-description: "Capturing headers and exploiting the power of intercepting http's request and response!!! May 16"
+description: "Intercept 401 errors via the proper AngularJS approach!!! May 16"
 tags: [javascript, angularjs, $httpProvider, interceptor, factories, Restangular]
 comments: true
 ---
