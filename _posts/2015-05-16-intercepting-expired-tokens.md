@@ -30,8 +30,6 @@ First, we'll make a factory or service that will house the code for capturing su
 
 ### The HTTP Interceptor
 {% highlight c %}
-'use strict';
-
 angular.module('myApp')
   .factory('APIInterceptor', function($q, $injector) {
 
@@ -77,16 +75,18 @@ angular.module('myApp')
   });
 {% endhighlight %}
 
-### Injecting our HTTP inteceptor to .config
+### Injecting our HTTP interceptor to .config
 {% highlight c %}
 
 angular.module('myApp')
-  .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
-
-    $httpProvider.interceptors.push('APIInterceptor');
-    });
+    .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
     // Code for UI-Router have been removed for brevity
+
+    // Inject APIInterceptor factory
+    $httpProvider.interceptors.push('APIInterceptor');
+
+    });
 
 {% endhighlight %}
 
