@@ -139,7 +139,7 @@ There you go! So what did we accomplish here? We now have a central way of inval
 
 I know^3, user tokens are invalidated in the backend. However, we still need to invalidate it in the frontend so we can be given a new token.
 
-Another approach that can you implement is by adding a code that will re-authenticate you in so you can receive a new token rather than redirecting the user back to the login page. However, this is now part of UX (User Experience). So whichever approach, tell your product owner, "I can do it! " :)
+Another approach that can be implemented is by adding a code that will re-authenticate a user so it can be given a new token rather than redirecting the user back to the login page. However, this is now part of UX (User Experience). So whichever approach, tell your product owner, "I can do it! " :)
 
 Hope you learned something from it.
 
