@@ -26,7 +26,7 @@ The above code works but the problem with this is that it's inefficient especial
 
 The better way or should I say, the recommended way of invalidating authentication information such as stored tokens, ids, etc is via AngularJS' HTTPInterceptor.
 
-First, we'll make a factory or service that will house the code for capturing successes and errros. Secondly, we'll inject this factory into $httpProvider inside .config. Some AngularJS developers will stop here but I usually add a listener inside .run for changing state, and in this case, changing to login state.
+First, we'll make a factory or service that will house the code for capturing successes and failures. Secondly, we'll inject this factory into $httpProvider inside .config. Some AngularJS developers will stop here but I usually add a listener inside .run for changing state, and in this case, calling login state to redirect user back to the login screen.
 
 ### The HTTP Interceptor
 {% highlight c %}
@@ -92,6 +92,8 @@ angular.module('myApp')
 
 
 ### The Session Factory
+This factory is used for authentication. It also takes care of storing user information as cookies. You can use AngularJS' built in $cookiestore. You can use ngBiscuit. You can ngKookies. You can use localStorage. The method destroy is used to clear the cookies as well as empty out "user" object. You'll notice that I didn't put $state.go('login') after $emit. You can but the ideal location for parsing states is in .run. Take a look at "The Listener on .run" below.
+
 {% highlight c %}
 angular.module('myApp')
   .factory('Session', function($rootScope, cookieStore, COOKIE_DOMAINS) {
@@ -123,6 +125,7 @@ angular.module('myApp')
 
 
 ### The Listener on .run
+When you make a broadcast like $rootScope.$emit('session:destroy' ....... ), the listener "session:destroy" will get triggered.
 {% highlight c %}
 angular.module('myApp')
     .run(function($rootScope, $state, $stateParams, Session) {
