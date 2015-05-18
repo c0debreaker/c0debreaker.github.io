@@ -29,7 +29,7 @@
 
     if (! window.AudioContext) {
         if (! window.webkitAudioContext) {
-          alert('You might be viewing this on your mobile. Unfortunately, AudioContext is not supported on this browser');
+          alert('You might be viewing this on your mobile. Unfortunately, AudioContext is not supported on this browser. Analyser will not be rendered.');
         }
         window.AudioContext = window.webkitAudioContext;
     }
