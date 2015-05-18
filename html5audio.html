@@ -26,6 +26,15 @@
   </style>
   <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.15/angular.js" data-semver="1.3.15"></script>
   <script>
+
+    if (! window.AudioContext) {
+        if (! window.webkitAudioContext) {
+          alert('You might be viewing this on your mobile. Unfortunately, AudioContext is not supported on this browser');
+        }
+        window.AudioContext = window.webkitAudioContext;
+    }
+
+
   var app = angular.module('angular-html5-audio', []);
 
   app.controller('MainCtrl', function($scope, $sce, $rootScope) {
