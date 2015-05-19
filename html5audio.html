@@ -54,56 +54,80 @@
   </div>
   <div class="codeContainer">
     <pre class="prettyprint" style="color:lightgray">
-
-  window.requestAnimFrame = function(){
-      return (
-          window.requestAnimationFrame       || 
-          window.webkitRequestAnimationFrame || 
-          window.mozRequestAnimationFrame    || 
-          window.oRequestAnimationFrame      || 
-          window.msRequestAnimationFrame     || 
-          function(/* function */ callback){
-              window.setTimeout(callback, 1000 / 60);
-          }
-      );
-  }();
-
-  $scope.playAudio = function(songTitle) {
-    $scope.songTitle = songTitle);
-  };
-
-  $scope.initMp3Player = function() {
-    $scope.myAudio = document.querySelector('audio');
-
-    window.AudioContext = AudioContext || window.webkitAudioContext;
-    $scope.context = new AudioContext();
-
-    $scope.analyser = $scope.context.createAnalyser();
-    $scope.source = $scope.context.createMediaElementSource($scope.myAudio);
-
-    $scope.fbc_array = new Uint8Array($scope.analyser.frequencyBinCount);
-    $scope.analyser.smoothingTimeConstant = 0.8;
-    // $scope.analyser.fftSize = 512;
-
-    $scope.canvas = document.getElementById('analyser_render');
-    $scope.ctx = $scope.canvas.getContext('2d');
-    $rootScope.$emit('startAudio', { message: 'start audio' });
     
-  };
+  var app = angular.module('angular-html5-audio', []);
 
-  $rootScope.$on('startAudio', function (event, args) {
-    $scope.source.connect($scope.analyser);
-    $scope.source.connect($scope.context.destination);
-    $scope.analyser.connect($scope.context.destination);
-    frameLooper();
-  });
+  app.controller('MainCtrl', function($scope, $sce, $rootScope) {
 
-  function frameLooper() {
-    requestAnimFrame(frameLooper);
-    renderSpectrum();
-  }
+    if (!window.AudioContext) {
+      if (!window.webkitAudioContext) {
+        alert('You might be viewing this on your mobile. Unfortunately, AudioContext is not supported on this browser');
+      }
+      window.AudioContext = window.webkitAudioContext;
+    }
 
-  function renderSpectrum() {
+    window.requestAnimFrame = function() {
+      return (
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function( /* function */ callback) {
+          window.setTimeout(callback, 1000 / 60);
+        }
+      );
+    }();
+
+    // Audio controls
+    $scope.playAudio = function(songTitle) {
+      $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
+       $scope.myAudio.play();
+    };
+
+    $scope.pauseAudio = function() {
+      $scope.myAudio.pause();
+    };
+
+    $scope.stopAudio = function() {
+      $scope.myAudio.pause();
+      $scope.myAudio.currentTime = 0;
+    };
+
+    $scope.initMp3Player = function() {
+      $scope.myAudio = document.querySelector('audio');
+
+      window.AudioContext = AudioContext || window.webkitAudioContext;
+      $scope.context = new AudioContext();
+
+      $scope.analyser = $scope.context.createAnalyser();
+      $scope.source = $scope.context.createMediaElementSource($scope.myAudio);
+
+      $scope.fbc_array = new Uint8Array($scope.analyser.frequencyBinCount);
+      $scope.analyser.smoothingTimeConstant = 0.8;
+      // $scope.analyser.fftSize = 512;
+
+      $scope.canvas = document.getElementById('analyser_render');
+      $scope.ctx = $scope.canvas.getContext('2d');
+      $rootScope.$emit('startAudio', {
+        message: 'start audio'
+      });
+
+    };
+
+    $rootScope.$on('startAudio', function(event, args) {
+      $scope.source.connect($scope.analyser);
+      $scope.source.connect($scope.context.destination);
+      $scope.analyser.connect($scope.context.destination);
+      frameLooper();
+    });
+
+    function frameLooper() {
+      requestAnimFrame(frameLooper);
+      renderSpectrum();
+    }
+
+    function renderSpectrum() {
     $scope.analyser.getByteFrequencyData($scope.fbc_array);
     $scope.ctx.clearRect(0, 0, $scope.canvas.width, $scope.canvas.height); // Clear the canvas
     $scope.ctx.fillStyle = '#00CCFF'; // Color of the bars
@@ -112,8 +136,8 @@
       bar_x = i * 2;
       bar_width = 1;
       bar_height = -($scope.fbc_array[i] / 2);
-      var spectrumColors = $scope.ctx.createLinearGradient(0,0,0,200);
-      spectrumColors.addColorStop(0,"black");
+      var spectrumColors = $scope.ctx.createLinearGradient(0, 0, 0, 200);
+      spectrumColors.addColorStop(0, "black");
       spectrumColors.addColorStop(0.5, "#FFA000");
       spectrumColors.addColorStop(0.3, "yellow");
       spectrumColors.addColorStop(0.8, "red");
@@ -124,6 +148,9 @@
   }
 
   window.addEventListener('load', $scope.initMp3Player, false);
+
+});
+
     </pre>
   </div>
 </body>
