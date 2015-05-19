@@ -29,7 +29,8 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
     { title : 'All of Me - John Legend', filename : 'allofme.mp3'},
     { title : 'Beautiful Day - U2', filename : 'beautifulday.mp3'},
     { title : 'You and Me - Lifehouse', filename : 'youandme.mp3'},
-    { title : 'Counting Stars - One Republic', filename : 'countingstars.mp3'}
+    { title : 'Counting Stars - One Republic', filename : 'countingstars.mp3'},
+    { title : 'Crash Into Me - Dave Matthews', filename : 'crashintome.mp3'}
   ];
 
   // Audio controls
