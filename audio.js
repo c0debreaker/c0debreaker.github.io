@@ -4,7 +4,7 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
 
   if (!window.AudioContext) {
     if (!window.webkitAudioContext) {
-      alert('You might be viewing this on your mobile. Unfortunately, AudioContext is not supported on this browser');
+      alert('You might be viewing this on a mobile device. Unfortunately, AudioContext is not supported on this browser. Analyser will not be rendered.');
     }
     window.AudioContext = window.webkitAudioContext;
   }
@@ -22,6 +22,14 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
     );
   }();
 
+  $scope.songList = [
+    { title : 'Waiting for Superman - Daughtry', filename : 'daughtry.mp3'},
+    { title : 'Plush - Stone Temple Pilots', filename : 'plush.mp3'},
+    { title : 'Jeremy - Pearl Jam', filename : 'jeremy.mp3'},
+    { title : 'All of Me - John Legend', filename : 'allofme.mp3'},
+    { title : 'Beautiful Day - U2', filename : 'beautifulday.mp3'}
+  ];
+  
   // Audio controls
   $scope.playAudio = function(songTitle) {
     $scope.songTitle = $sce.trustAsResourceUrl(songTitle);

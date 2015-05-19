@@ -14,47 +14,25 @@
 <html ng-app="angular-html5-audio">
 
 <body ng-controller="MainCtrl">
+
   <div class="songContainer">
-    <div>
-      <span class="left">Waiting for Superman - Daughtry</span>
+    <div ng-repeat="song in songList">
+      <span class="left" >{{song.title}}</span>
       <span class="right">
-        <button ng-click="playAudio('daughtry.mp3')"><i class="fa fa-play-circle fa-lg"></i></button>
-        <button ng-click="pauseAudio()"><i class="fa fa-pause fa-lg"></i></button>
-        <button ng-click="stopAudio()"><i class="fa fa-stop fa-lg"></i></button>
-      </span>
-    </div>
-    <div>
-      <span class="left">Plush - Stone Temple Pilots</span>
-      <span class="right">
-        <button ng-click="playAudio('plush.mp3')"><i class="fa fa-play-circle fa-lg"></i></button>
-        <button ng-click="pauseAudio()"><i class="fa fa-pause fa-lg"></i></button>
-        <button ng-click="stopAudio()"><i class="fa fa-stop fa-lg"></i></button>
-      </span>
-    </div>
-    <div>
-      <span class="left">Jeremy - Pearl Jam</span>
-      <span class="right">
-        <button ng-click="playAudio('jeremy.mp3')"><i class="fa fa-play-circle fa-lg"></i></button>
-        <button ng-click="pauseAudio()"><i class="fa fa-pause fa-lg"></i></button>
-        <button ng-click="stopAudio()"><i class="fa fa-stop fa-lg"></i></button>
-      </span>
-    </div>
-    <div>
-      <span class="left">All of Me - John Legend</span>
-      <span class="right">
-        <button ng-click="playAudio('allofme.mp3')"><i class="fa fa-play-circle fa-lg"></i></button>
+        <button ng-click="playAudio(song.filename)"><i class="fa fa-play-circle fa-lg"></i></button>
         <button ng-click="pauseAudio()"><i class="fa fa-pause fa-lg"></i></button>
         <button ng-click="stopAudio()"><i class="fa fa-stop fa-lg"></i></button>
       </span>
     </div>
   </div>
+
   <div id="mp3_player">
     <audio autoplay loop ng-src="{{songTitle}}"></audio>
     <canvas id="analyser_render"></canvas>
   </div>
   <div class="codeContainer">
     <pre class="prettyprint" style="color:lightgray">
-    
+
   var app = angular.module('angular-html5-audio', []);
 
   app.controller('MainCtrl', function($scope, $sce, $rootScope) {
