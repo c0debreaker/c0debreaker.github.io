@@ -27,9 +27,11 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
     { title : 'Plush - Stone Temple Pilots', filename : 'plush.mp3'},
     { title : 'Jeremy - Pearl Jam', filename : 'jeremy.mp3'},
     { title : 'All of Me - John Legend', filename : 'allofme.mp3'},
-    { title : 'Beautiful Day - U2', filename : 'beautifulday.mp3'}
+    { title : 'Beautiful Day - U2', filename : 'beautifulday.mp3'},
+    { title : 'You and Me - Lifehouse', filename : 'youandme.mp3'},
+    { title : 'Counting Stars - One Republic', filename : 'countingstars.mp3'}
   ];
-  
+
   // Audio controls
   $scope.playAudio = function(songTitle) {
     $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
