@@ -30,7 +30,8 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
     { title : 'Beautiful Day - U2', filename : 'beautifulday.mp3'},
     { title : 'You and Me - Lifehouse', filename : 'youandme.mp3'},
     { title : 'Counting Stars - One Republic', filename : 'countingstars.mp3'},
-    { title : 'Crash Into Me - Dave Matthews', filename : 'crashintome.mp3'}
+    { title : 'Crash Into Me - Dave Matthews', filename : 'crashintome.mp3'},
+    { title : 'The Ghost In You - Psychedelic Furs', filename : 'ghostinyou.mp3'}
   ];
 
   // Audio controls
