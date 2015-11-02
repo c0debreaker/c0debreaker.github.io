@@ -21,3 +21,5 @@ I'm extremely shocked as to why these things are happening! There's actually ano
 To all my friends, PLEASE DO NOT VISIT PHILIPPINES FOR NOW! I don't want you to become the next victim.
 
 ### Ayaw ko po kayo na maging sunod na biktima sa mga nangyayari ngayon!!!
+
+We're praying that the government will finally put an end to it and act quickly!
