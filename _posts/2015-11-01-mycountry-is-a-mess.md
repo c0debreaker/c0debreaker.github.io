@@ -10,6 +10,10 @@ comments: true
 
 There's no doubt, Philippines has the most beautiful tourist spots in the world! I don't need to say much more about it. Just search it on the internet.
 
+<figure>
+    <a href="/images/yellowboat.jpg"><img src="/images/yellowboat.jpg"></a>
+</figure>
+
 ### The Bad, I mean the WORST!!!!!!!
 
 I needed to make this post because I don't want you, my friends and acquaintances(American, Indian, Japanese, Polish, British, etc) to become the next victim in case you're planning to visit Philippines. Yes, I'm referring to the country where I grew up, Philippines. In fact, I was planning to visit my country in 2017 but decided not to anymore because of the latest crime that is happening right now specifically the Laglag Bala Gang(planting of gun bullets inside passenger's baggages) modus.
