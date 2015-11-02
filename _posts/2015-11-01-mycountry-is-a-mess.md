@@ -16,10 +16,7 @@ There's no doubt, Philippines has the most beautiful tourist spots in the world!
 
 ### The Bad, I mean the WORST!!!!!!!
 
-I needed to make this post because I don't want you, my friends and acquaintances(American, Indian, Japanese, Polish, British, etc) to become the next victim in case you're planning to visit Philippines. Yes, I'm referring to the country where I grew up, Philippines. In fact, I was planning to visit my country in 2017 but decided not to anymore because of the latest crime that is happening right now specifically the Laglag Bala Gang(planting of gun bullets inside passenger's baggages) modus.
-
----
-I'm extremely shocked as to why these things are happening! There's actually another news prior to this one and it was big in the Philippines. People who work at the customs would examine baggages of passengers which is a standard protocol but what's bad about this is that, they would also steal stuff! Filipinos aren't really like this but not sure what's going on! Anyways, that's all I wanted to say and wanted to give you a heads-up!!! :( 
+I needed to make this post because I don't want you, my friends and acquaintances(American, Indian, Japanese, Polish, British, etc) to become the next victim in case you're planning to visit Philippines. Yes, I'm referring to the country where I grew up, Philippines. In fact, I was planning to visit but decided to hold off for now because of the crime that happened recently. Few people got victimized by the Laglag Bala Gang(planting of gun bullets inside passenger's baggages) modus. These gang members are also believed to be airport employees. They would threaten the victims that if they don't pay, they'll get jailed. Extortion!!! :( This is extremely sad!
 
 ---
 To all my friends, PLEASE DO NOT VISIT PHILIPPINES FOR NOW! I don't want you to become the next victim.
