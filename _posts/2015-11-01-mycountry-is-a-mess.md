@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHILIPPINES: Used to be a beautiful place until .......
+title: PHILIPPINES - Used to be a beautiful place until .......
 description: "There's just too much bad things in the Philippines!!! :("
 tags: [crime, stealing]
 comments: true
