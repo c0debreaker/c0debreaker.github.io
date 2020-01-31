@@ -77,6 +77,7 @@
     };
 
     $scope.playAudio2 = function(songTitle) {
+      window.addEventListener('load', $scope.initMp3Player, false);
       window.fetch(songTitle)
         .then(response => response.arrayBuffer())
         .then(arrayBuffer => $scope.context.decodeAudioData(arrayBuffer))
@@ -149,7 +150,7 @@
     }
   }
 
-  window.addEventListener('load', $scope.initMp3Player, false);
+  // window.addEventListener('load', $scope.initMp3Player, false);
 
   });
 
