@@ -37,8 +37,24 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
   // Audio controls
   $scope.playAudio = function(songTitle) {
     $scope.initMp3Player();
+    // $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
+    // $scope.myAudio.play();
     $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
-    $scope.myAudio.play();
+    // $scope.myAudio.resume();
+    var playPromise = $scope.myAudio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Automatic playback started!
+        // Show playing UI.
+        // We can now safely pause video...
+        $scope.myAudio.pause();
+      })
+      .catch(error => {
+        // Auto-play was prevented
+        // Show paused UI.
+      });
+    }
+
   };
 
   $scope.pauseAudio = function() {
