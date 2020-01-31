@@ -44,7 +44,7 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
     var playPromise = $scope.myAudio.play();
     if (playPromise !== undefined) {
       playPromise.then(_ => {
-        $scope.myAudio.pause();
+        // $scope.myAudio.pause();
       })
       .catch(error => {
         console.log(error);
