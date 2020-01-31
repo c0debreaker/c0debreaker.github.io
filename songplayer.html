@@ -60,6 +60,7 @@
     // Audio controls
     $scope.playAudio = function(songTitle) {
       $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
+      $scope.myAudio.resume();
       var playPromise = $scope.myAudio.play();
       if (playPromise !== undefined) {
         playPromise.then(_ => {
