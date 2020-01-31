@@ -19,7 +19,7 @@
     <div ng-repeat="song in songList">
       <span class="left" >{{song.title}}</span>
       <span class="right">
-        <button ng-click="playAudio2(song.filename)"><i class="fa fa-play-circle fa-lg"></i></button>
+        <button ng-click="playAudio(song.filename)"><i class="fa fa-play-circle fa-lg"></i></button>
         <button ng-click="pauseAudio()"><i class="fa fa-pause fa-lg"></i></button>
         <button ng-click="stopAudio()"><i class="fa fa-stop fa-lg"></i></button>
       </span>
