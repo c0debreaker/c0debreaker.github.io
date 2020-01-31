@@ -36,6 +36,7 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
 
   // Audio controls
   $scope.playAudio = function(songTitle) {
+    window.addEventListener('load', $scope.initMp3Player, false);
     $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
      $scope.myAudio.play();
   };
