@@ -67,7 +67,8 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
         source.buffer = audioBuffer;
         source.connect($scope.context.destination);
         source.start();
-  });
+    })
+  }
 
   $scope.pauseAudio = function() {
     $scope.myAudio.pause();
