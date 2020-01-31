@@ -58,7 +58,7 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
   };
 
   $scope.playAudio2 = function(songTitle) {
-    window.addEventListener('load', $scope.initMp3Player, false);
+    $scope.initMp3Player();
     window.fetch(songTitle)
       .then(response => response.arrayBuffer())
       .then(arrayBuffer => $scope.context.decodeAudioData(arrayBuffer))
