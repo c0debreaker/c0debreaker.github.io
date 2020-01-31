@@ -57,6 +57,18 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
 
   };
 
+  $scope.playAudio2 = function(songTitle) {
+    window.addEventListener('load', $scope.initMp3Player, false);
+    window.fetch(songTitle)
+      .then(response => response.arrayBuffer())
+      .then(arrayBuffer => $scope.context.decodeAudioData(arrayBuffer))
+      .then(audioBuffer => {
+        const source = $scope.context.createBufferSource();
+        source.buffer = audioBuffer;
+        source.connect($scope.context.destination);
+        source.start();
+  });
+
   $scope.pauseAudio = function() {
     $scope.myAudio.pause();
   };
