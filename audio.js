@@ -102,6 +102,6 @@ app.controller('MainCtrl', function($scope, $sce, $rootScope) {
     }
   }
 
-  window.addEventListener('load', $scope.initMp3Player, false);
+  // window.addEventListener('load', $scope.initMp3Player, false);
 
 });
