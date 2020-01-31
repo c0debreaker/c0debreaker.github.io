@@ -19,7 +19,7 @@
     <div ng-repeat="song in songList">
       <span class="left" >{{song.title}}</span>
       <span class="right">
-        <button ng-click="playAudio(song.filename)"><i class="fa fa-play-circle fa-lg"></i></button>
+        <button ng-click="playAudio2(song.filename)"><i class="fa fa-play-circle fa-lg"></i></button>
         <button ng-click="pauseAudio()"><i class="fa fa-pause fa-lg"></i></button>
         <button ng-click="stopAudio()"><i class="fa fa-stop fa-lg"></i></button>
       </span>
@@ -60,7 +60,7 @@
     // Audio controls
     $scope.playAudio = function(songTitle) {
       $scope.songTitle = $sce.trustAsResourceUrl(songTitle);
-      $scope.myAudio.resume();
+      // $scope.myAudio.resume();
       var playPromise = $scope.myAudio.play();
       if (playPromise !== undefined) {
         playPromise.then(_ => {
@@ -75,6 +75,17 @@
         });
       }
     };
+
+    $scope.playAudio2 = function(songTitle) {
+      window.fetch(songTitle)
+        .then(response => response.arrayBuffer())
+        .then(arrayBuffer => $scope.context.decodeAudioData(arrayBuffer))
+        .then(audioBuffer => {
+          const source = $scope.context..createBufferSource();
+          source.buffer = audioBuffer;
+          source.connect($scope.context..destination);
+          source.start();
+      });
 
     $scope.pauseAudio = function() {
       $scope.myAudio.pause();
