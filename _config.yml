@@ -1,7 +1,7 @@
 title:            Daily Hacks of Life
 description:      Anything worth experimenting, I will document!
 url:              http://c0debreaker.github.io
-disqus_shortname: 
+disqus_shortname:
 
 # Owner/author information
 owner:
@@ -10,26 +10,26 @@ owner:
   bio:            "I'm a farmer"
   email:          rcamara@rocketmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: v1rtu0s1ty
-  facebook:       
-  github: c0debreaker 
+  twitter:
+  facebook:
+  github: c0debreaker
   stackoverflow:
   linkedin: ronneilcamara
-  instagram:      
-  lastfm:         
-  tumblr: 
-  pinterest: 
-  foursquare: 
-  steam: 
+  instagram:
+  lastfm:
+  tumblr:
+  pinterest:
+  foursquare:
+  steam:
   dribbble:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics:
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
+bing_verify:
 
 # Links to include in top navigation
 # For external links add external: true
@@ -61,7 +61,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
